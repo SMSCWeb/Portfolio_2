@@ -1,0 +1,123 @@
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    gap: 30px;
+    height: 100%;
+}
+
+.service-left-section {
+    width: 50%;
+}
+
+.service-right-section {
+    width: 50%;
+    height: 100%;
+}
+
+.service-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.service-images img {
+    max-width: 100%;
+    height: auto;
+}
+
+.service-text {
+    flex: 1;
+    margin: 0 20px;
+}
+.service-cards {
+    /* flex: 1; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.service-content {
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid #007bff;
+    border-radius: 4px;
+}
+.service-btn{
+    margin: 40px 20px;
+}
+.service-title h3 {
+    margin: 0;
+}
+
+/* Responsive styles for screens up to 1200px */
+@media (max-width: 1200px) {
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service-cards {
+        justify-content: space-around;
+        grid-gap: 40px;
+
+    }
+
+    .service-left-section {
+        width: 100%;
+    }
+
+    .service-right-section {
+        width: 100%;
+    }
+}
+
+/* Responsive styles for screens up to 768px */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service-images {
+        margin: 0;
+    }
+
+    .service-text {
+        margin: 0;
+    }
+
+    .service-cards {
+        justify-content: center;
+        /* gap: 10px; */
+        grid-gap: 40px;
+    }
+
+    .service-content {
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+        border: none;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 90%;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+        border-top: 5px solid #007bff;
+    }
+
+    .service-content:hover {
+        transform: translateY(-5px);
+    }
+}

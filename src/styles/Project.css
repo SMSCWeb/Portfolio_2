@@ -1,0 +1,97 @@
+.project-container {
+    height: 100%;
+    padding: 50px;
+    background: #f6f6f6;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.grid-item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item-inner::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    bottom: -33px;
+    left: 0px;
+    width: 108%;
+    clip-path: polygon(0 0, 102% 102%, 0 102%);
+    background: #d7a44959;
+    transition: all 400ms ease;
+    transform: scale(0);
+    transform-origin: bottom left;
+}
+
+.grid-item-inner:hover::after {
+    transform: scale(1);
+}
+
+.project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+}
+
+.project-modal img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.close-button {
+    position: absolute;
+    top: 4px;
+    right: 4rem;
+    font-size: 50px !important;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .close-button {
+        right: 1rem;
+    }
+
+    .project-container {
+        width: 100%;
+    }
+}

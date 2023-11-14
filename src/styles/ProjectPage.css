@@ -1,0 +1,136 @@
+.project-selection-buttons button {
+    margin-bottom: 10px;
+    margin-right: 18px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.project-page-container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* YourComponent.css */
+
+/* General styles */
+.help-area {
+    padding: 40px 0;
+}
+
+.help-thumb {
+    position: relative;
+}
+
+.help-thumb img {
+    max-width: 100%;
+    height: auto;
+}
+
+.help-shape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.section-title {
+    padding-left: 40px;
+}
+
+.section-sub-title h5 {
+    color: #333;
+}
+
+.section-main-title {
+    margin: 20px 0;
+}
+
+.section-title-desc {
+    color: #777;
+}
+
+.dreamhub-btn a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-content h1{
+    margin-left: 93px;
+
+}
+.project-content{
+    margin-right: 50px;
+    margin-left: 95px;
+}
+.dreamhub-btn a:hover {
+    background-color: #555;
+}
+
+/* Media Query for screens up to 1440px */
+@media screen and (max-width: 1440px) {
+    /* Add your responsive styles here */
+}
+
+/* Media Query for screens up to 1024px */
+@media screen and (max-width: 1024px) {
+    .help-area {
+        padding: 30px 0;
+    }
+
+    .section-title {
+        padding-left: 20px;
+    }
+    .project-content{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Media Query for screens up to 768px */
+@media screen and (max-width: 768px) {
+    .help-thumb img {
+        width: 100%;
+    }
+
+    .section-title {
+        padding: 20px;
+    }
+
+    .section-title-desc {
+        font-size: 14px;
+    }
+}
+
+/* Media Query for screens up to 600px */
+@media screen and (max-width: 600px) {
+    .help-thumb img {
+        width: 100%;
+    }
+
+    .section-title {
+        padding: 10px;
+    }
+
+    .section-sub-title h5 {
+        font-size: 16px;
+    }
+
+    .section-main-title h1 {
+        font-size: 24px;
+    }
+    .project-content{
+        margin: 0;
+        padding: 0;
+    }
+}

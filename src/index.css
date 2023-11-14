@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.5;
+  height: -webkit-fill-available;
+  color: #000;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  user-select: none;
+  background: none;
+  box-shadow: none;
+  text-decoration: none !important;
+}
+
+
+.btn {
+  display: inline-block !important;
+  text-decoration: none !important;
+  background: #000116 !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  padding: 13px 35px 12px !important;
+  position: relative !important;
+  z-index: 1 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.btn {
+  color: #fff;
+}
+
+.btn:hover {
+  color: #000116;
+}
+
+.btn:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.btn:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(0 1, 0% 100%, 101% 100%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  background: #ffc507;
+  pointer-events: none;
+  transition: .5s;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+
+.btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  clip-path: polygon(0 1, 101% 0%, 100% 100%);
+  transform: scale(0);
+  transform-origin: top right;
+  background: #ffc507;
+  pointer-events: none;
+  transition: .5s;
+  opacity: .5;
+  z-index: -1;
+  height: 100%;
+
+}
+
+.scroll-area {
+  opacity: 0;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 2s ease-in-out, background-color 0.5s;
+  transform: translateY(-100vh);
+  background-color: #d7a449;
+  border-radius: 50%;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-area.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-area .go-top {
+  color: white;
+  transition: color 1s;
+}
+
+.scroll-area:hover {
+  background-color: #d7a449;
+  /* Ensure the background color stays black on hover */
+}
+
+.scroll-area:active {
+  background-color: #d7a449;
+}

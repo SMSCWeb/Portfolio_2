@@ -1,0 +1,165 @@
+/* Base styles for the services details area */
+.services-details-area {
+    padding: 60px 0;
+}
+
+.services-details-content {
+    text-align: left;
+}
+
+.services-details-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.services-details-content h3 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.services-details-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.features-text h4 {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.service-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.service-features-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.service-features-list i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Widget styles for the services details sidebar */
+.services-widget {
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.widget {
+    margin-bottom: 30px;
+}
+
+.widget-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.widget_categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget_categories ul li {
+    margin-bottom: 10px;
+}
+
+.widget_categories ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+.widget_categories ul li.active a {
+    font-weight: bold;
+}
+
+.widget_download_btn .section-bottom {
+    margin-top: 20px;
+}
+
+.widget_download_btn a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.widget_download_btn a.active {
+    background-color: #333;
+}
+
+.widget_download_btn a.default-btn {
+    background-color: #666;
+}
+.services-details-content .features-text .service-features-list li {
+    display: inline-block;
+    color: #0b0b31;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #ffffff;
+    padding: 14px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right: 18px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-left: 2px solid #282828;
+    -webkit-box-shadow: -1px 3px 20px 0px rgb(82, 90, 101, 0.1);
+    box-shadow: -1px 3px 20px 0px rgb(82, 90, 101, 0.1);
+}
+.services-button{
+    margin-bottom: 10px;
+    margin-right: 18px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.project-page-title{
+    font-size: 40px;
+}
+/* Media queries for responsiveness */
+@media screen and (max-width: 1440px) {
+    .services-details-image img {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .services-details-image img {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services-details-image img {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .services-details-area {
+        padding: 40px 0;
+    }
+
+    .services-details-image img {
+        max-width: 100%;
+    }
+}
