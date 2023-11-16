@@ -112,8 +112,12 @@
 }
 
 .header.on-scroll {
-    background: #0000005e;
+    background: #0000006d;
     box-shadow: var(--shadow-medium);
+}
+.header.on-scroll .menu-item{
+    color: #fff;
+
 }
 
 

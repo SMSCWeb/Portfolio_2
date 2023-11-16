@@ -2,10 +2,34 @@ import React from 'react'
 import "./styles/ContactPage.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faLinkedin, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom'
 const ContactPage = () => {
   return (
     <div>
-      {/* <NavBar /> */}
+      <div className="breatcome-area d-flex align-items-center">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="breatcome-content">
+                <div className="breatcome-title">
+                  <h1>Contact Us</h1>
+                </div>
+                <div className="breatcome-text">
+                  <ul>
+                    <li>
+                      <Link to="/">
+                        <p>Home</p>
+                      </Link>
+                    </li>
+                    <li> &gt; Contact</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="overlay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="contact-page-container">
         <div className="contact-left-section">
           <div className="section-title">

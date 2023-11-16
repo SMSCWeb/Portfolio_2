@@ -1,0 +1,74 @@
+.carrer-page-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.career-left-section {
+    width: 50%;
+}
+
+.career-right-section {
+    width: 50%;
+    height: 100%;
+}
+
+.career-right-section .form_box label {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+@media screen and (max-width: 1440px) {
+    /* .form_box {
+        width: 100%;
+    } */
+}
+
+/* Responsive styles for screen width up to 1024px */
+@media screen and (max-width: 1024px) {
+    /* .carrer-page-container {
+        flex-direction: column;
+    }
+
+    .career-left-section {
+        width: 100%;
+    }
+
+    .career-right-section {
+        width: 100%;
+    } */
+}
+
+/* Responsive styles for screen width up to 768px */
+@media screen and (max-width: 768px) {
+    .carrer-page-container {
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    .career-left-section {
+        width: 100%;
+    }
+
+    .career-right-section {
+        width: 100%;
+    }
+}
+
+/* Responsive styles for screen width up to 600px */
+@media screen and (max-width: 600px) {
+    .carrer-page-container {
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    .career-left-section {
+        width: 100%;
+    }
+
+    .career-right-section {
+        width: 100%;
+    }
+}
