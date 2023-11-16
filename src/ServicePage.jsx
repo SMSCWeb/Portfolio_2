@@ -63,16 +63,16 @@ const ServicePage = () => {
 };
     return (
         <div>
-            <NavBar />
-            <div class="breatcome-area d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="breatcome-content">
-                                <div class="breatcome-title">
+            {/* <NavBar /> */}
+            <div className="breatcome-area d-flex align-items-center">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="breatcome-content">
+                                <div className="breatcome-title">
                                     <h1>Our Services</h1>
                                 </div>
-                                <div class="breatcome-text">
+                                <div className="breatcome-text">
                                     <ul>
                                         <li>
                                             <Link to="/">
@@ -88,22 +88,22 @@ const ServicePage = () => {
                     </div>
                 </div>
             </div>
-            <div class="services-details-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-md-12">
-					<div class="services-details-content">
-						<div class="services-details-image">
+            <div className="services-details-area">
+		<div className="container">
+			<div className="row">
+				<div className="col-lg-8 col-md-12">
+					<div className="services-details-content">
+						<div className="services-details-image">
 							<img src={Image1} alt="image"/>
 						</div>
 						
 						<h3>Looking For An Excelent Business Solution ?</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt laborum</p>
 						
-						<div class="features-text">
+						<div className="features-text">
 							<h4>We Deliver High-Quality Solutions</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. minim veniam, quis nostrud exercitation ullamco laboris nisi commodo consequat.</p>
-							<ul class="service-features-list">
+							<ul className="service-features-list">
               <div className="inner">
                         <div role="tablist" className="services-list">
                             {servicesData.map((service) => (
@@ -142,23 +142,23 @@ const ServicePage = () => {
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-12">
-					<aside class="services-widget">
-						<section class="widget widget_categories">
-							<h3 class="widget-title">Our Services</h3>
+				<div className="col-lg-4 col-md-12">
+					<aside className="services-widget">
+						<section className="widget widget_categories">
+							<h3 className="widget-title">Our Services</h3>
 							<ul>
-								<li class="active"> <a href="#">Marketing Strategy</a></li>
+								<li className="active"> <a href="#">Marketing Strategy</a></li>
 								<li> <a href="#">Cloud Computing</a></li>
 								<li> <a href="#">Strategies</a></li>
 								<li> <a href="#">Cloud Integration</a></li>
 								<li> <a href="#">IT Consultancy</a></li>
 							</ul>
 						</section>
-						<section class="widget widget_download_btn">
-							<h3 class="widget-title">Company Profile</h3>
-							<div class="section-bottom">
-								<a href="#" class="active">Download PDF</a>
-								<a href="#" class="default-btn">Download Word File</a>
+						<section className="widget widget_download_btn">
+							<h3 className="widget-title">Company Profile</h3>
+							<div className="section-bottom">
+								<a href="#" className="active">Download PDF</a>
+								<a href="#" className="default-btn">Download Word File</a>
 							</div>
 						</section>
 					</aside>
@@ -166,7 +166,7 @@ const ServicePage = () => {
 			</div>
 		</div>
 	</div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

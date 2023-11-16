@@ -2,20 +2,19 @@ import React from 'react'
 import "../styles/Footer.css"
 import Logo from "../assets/logo-white.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faLinkedin, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Footer = () => {
     return (
         <div>
-            <footer class="footer">
-                <div class="container">
-                    <div class="row justify-center">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="widget1">
-                                <div class="logo">
-                                    <img src={Logo} class="img-fluid" alt="" />
+            <footer className="footer">
+                <div className="container">
+                    <div className="row justify-center">
+                        <div className="col-md-6 col-lg-4">
+                            <div className="widget1">
+                                <div className="logo">
+                                    <img src={Logo} className="img-fluid" alt="" />
                                 </div>
                                 <p>
                                     In eu libero ligula. Fusce eget metus lorem, ac viverra
@@ -23,7 +22,7 @@ const Footer = () => {
                                     nisi est varius diam, ac ultrices sem ante quis sem.
                                     Proin ultricies volutpat sapien.
                                 </p>
-                                <div class="socialLinks">
+                                <div className="socialLinks">
                                     <ul>
                                         <li>
                                             <a href="#">
@@ -50,8 +49,8 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-lg-2">
-                            <div class="widget3">
+                        <div className="col-sm-6 col-lg-2">
+                            <div className="widget3">
                                 <h5>
                                     Latest News
                                 </h5>
@@ -89,8 +88,8 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-lg-2">
-                            <div class="widget3">
+                        <div className="col-sm-6 col-lg-2">
+                            <div className="widget3">
                                 <h5>
                                     Quick Links
                                 </h5>
@@ -128,8 +127,8 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-lg-2">
-                            <div class="widget4">
+                        <div className="col-sm-6 col-lg-2">
+                            <div className="widget4">
                                 <h5>
                                     Other Links
                                 </h5>
@@ -169,10 +168,10 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div class="copyRightArea">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 text-center">
+                <div className="copyRightArea">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 text-center">
                                 <p>&copy; Copyright All rights reserved 2023. Design By <a href="/">Shekhar</a></p>
                             </div>
                         </div>

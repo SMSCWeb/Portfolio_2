@@ -12,7 +12,7 @@ const Hero = () => {
                 <div className="left-section">
                     <p className='greeting'>Welcome To</p>
                     <p className='hero-title'>SM Service Consultancy</p>
-                    <p className='hero-description'>It is a group of professionally qualified and experienced professionals, who have about 10-25 years of experience in their respective fields and have been successfully designed & executed several large projects.
+                    <p className='hero-description'>It is a group of professionally qualified and experienced professionals, who have about 10&#45;25 years of experience in their respective fields and have been successfully designed & executed several large projects.
                     </p>
                     <Link to="/service">
                         <button className='btn'>

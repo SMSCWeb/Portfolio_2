@@ -44,22 +44,22 @@ const HomePage = () => {
     return (
         <div>
             <div className={`scroll-area ${showScrollButton ? 'show' : ''}`} onClick={scrollToTop}>
-                <div class="top-wrap">
-                    <div class="go-top-btn-wraper">
-                        <div class="go-top go-top-button active">
+                <div className="top-wrap">
+                    <div className="go-top-btn-wraper">
+                        <div className="go-top go-top-button active">
                             <FontAwesomeIcon icon={faArrowUp} />
                             {/* <FontAwesomeIcon icon={faArrowUp} /> */}
                         </div>
                     </div>
                 </div>
             </div>
-            <NavBar />
+            {/* <NavBar /> */}
             <Hero />
             <About />
             <Service />
             <Project />
             <Client />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

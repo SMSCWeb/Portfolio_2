@@ -1,14 +1,11 @@
 import React from 'react'
 import "./styles/ContactPage.css"
-import Image from "./assets/bg3.jpg"
-import NavBar from './components/Navbar'
-import Footer from './components/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faLinkedin, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 const ContactPage = () => {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="contact-page-container">
         <div className="contact-left-section">
           <div className="section-title">
@@ -20,7 +17,7 @@ const ContactPage = () => {
                 questions regarding the company our our services.</p>
             </div>
             <div className="contact-section-icon">
-              <div class="socialLinks">
+              <div className="socialLinks">
                 <ul>
                   <li>
                     <a href="#">
@@ -83,7 +80,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

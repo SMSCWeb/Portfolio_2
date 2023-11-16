@@ -19,13 +19,13 @@ const Service = () => {
                 </div>
             </div>
             <div className="service-right-section">
-                <div class="section-main-title">
+                <div className="section-main-title">
                     <p>Our Services</p>
                     <hr />
                 </div>
                 <div className="service-text hero-description">
                     <p>
-                        Services are offered from the conceptual stage to commissioning for each project, enabling the Owner/Architect/Planner to arrive at an optimum design and installation for the following engineering services:
+                        Services are offered from the conceptual stage to commissioning for each project, enabling the Owner&#47;Architect&#47;Planner to arrive at an optimum design and installation for the following engineering services:
                     </p>
                 </div>
                 <div className="service-content-container">

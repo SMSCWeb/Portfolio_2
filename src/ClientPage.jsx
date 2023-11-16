@@ -48,16 +48,16 @@ const testimonials = [
 const ClientPage = () => {
   return (
     <div>
-      <NavBar />
-      <div class="breatcome-area d-flex align-items-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="breatcome-content">
-                <div class="breatcome-title">
+      {/* <NavBar /> */}
+      <div className="breatcome-area d-flex align-items-center">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="breatcome-content">
+                <div className="breatcome-title">
                   <h1>Our Clients</h1>
                 </div>
-                <div class="breatcome-text">
+                <div className="breatcome-text">
                   <ul>
                     <li>
                       <Link to="/">
@@ -88,7 +88,7 @@ const ClientPage = () => {
 
         {/* <p>testimonial/review</p> */}
       </div >
-      <Footer />
+      {/* <Footer /> */}
     </div >
   )
 }

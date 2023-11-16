@@ -53,46 +53,44 @@
     vertical-align: middle;
     margin-bottom: 1rem;
 }
-
-.heading {
-    &-xl {
-        font-family: inherit;
-        font-size: clamp(2.648rem, 6vw, 4.241rem);
-        font-weight: 700;
-        line-height: 1.15;
-        letter-spacing: -1px;
-    }
-
-    &-lg {
-        font-family: inherit;
-        font-size: clamp(2.179rem, 5vw, 3.176rem);
-        font-weight: 700;
-        line-height: 1.15;
-        letter-spacing: -1px;
-    }
-
-    &-md {
-        font-family: inherit;
-        font-size: clamp(1.794rem, 4vw, 2.379rem);
-        font-weight: 700;
-        line-height: 1.25;
-        letter-spacing: -1px;
-    }
-
-    &-sm {
-        font-family: inherit;
-        font-size: clamp(1.476rem, 3vw, 1.782rem);
-        font-weight: 600;
-        line-height: 1.5;
-    }
-
-    &-xs {
-        font-family: inherit;
-        font-size: clamp(1.215rem, 2vw, 1.335rem);
-        font-weight: 500;
-        line-height: 1.5;
-    }
+.heading-xl {
+    font-family: inherit;
+    font-size: clamp(2.648rem, 6vw, 4.241rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1px;
 }
+
+.heading-lg {
+    font-family: inherit;
+    font-size: clamp(2.179rem, 5vw, 3.176rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.heading-md {
+    font-family: inherit;
+    font-size: clamp(1.794rem, 4vw, 2.379rem);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -1px;
+}
+
+.heading-sm {
+    font-family: inherit;
+    font-size: clamp(1.476rem, 3vw, 1.782rem);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.heading-xs {
+    font-family: inherit;
+    font-size: clamp(1.215rem, 2vw, 1.335rem);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
 
 .paragraph {
     font-family: inherit;
