@@ -110,9 +110,11 @@ textarea::placeholder {
     z-index: -1;
     transition: .5s;
 }
+
 .socialLinks a:hover:before {
     width: 100%;
 }
+
 .socialLinks ul li a:hover {
     background: #d7a449;
     color: #fff;
@@ -134,6 +136,18 @@ textarea::placeholder {
 
 /* Responsive styles for screen width up to 768px */
 @media screen and (max-width: 768px) {
+    .contact-page-container {
+        flex-direction: column;
+    }
+
+    .contact-left-section {
+        width: 100%;
+    }
+
+    .contact-right-section {
+        width: 100%;
+    }
+
     .col-lg-12 {
         width: 100%;
     }
@@ -145,6 +159,18 @@ textarea::placeholder {
 
 /* Responsive styles for screen width up to 600px */
 @media screen and (max-width: 600px) {
+    .contact-page-container {
+        flex-direction: column;
+    }
+
+    .contact-left-section {
+        width: 100%;
+    }
+
+    .contact-right-section {
+        width: 100%;
+    }
+
     .contact_bg {
         flex-direction: column;
         align-items: center;

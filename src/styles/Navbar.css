@@ -144,7 +144,7 @@
     left: 0;
     width: 100%;
     height: auto;
-    padding: 4rem 0 3rem;
+    padding: 5rem 0 1rem;
     overflow: hidden;
     background-color: #fff;
     box-shadow: var(--shadow-medium);
@@ -155,6 +155,10 @@
     top: 0;
     width: 100%;
     height: auto;
+    /* background: #000; */
+}
+.menu .is-active li{
+    color: #000;
 }
 
 .menu-inner {
@@ -163,6 +167,7 @@
     justify-content: center;
     align-items: center;
     row-gap: 1.25rem;
+    padding: 0;
 }
 
 .menu-link {
@@ -226,6 +231,7 @@
         display: none;
         visibility: hidden;
     }
+    
 }
 
 .burger-line {
@@ -270,44 +276,11 @@
     top: 0.5rem;
     transform: rotate(-135deg);
 }
-/* 
-.menu-item .menu-link .wiggle {
-    position: absolute;
-    bottom: -7px;
-    height: 3px;
-    left: 0%;
-    width: 100%;
-    overflow: hidden;
-    transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+@media screen and (max-width: 768px) {
+    .header.on-scroll{
+        background: #fff;
+    }
+    .header.on-scroll li{
+        color: #000 !important;
+    }
 }
-
-.menu-item .menu-link .wiggle::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: translateX(-105%);
-    -moz-transform: translateX(-105%);
-    -ms-transform: translateX(-105%);
-    -o-transform: translateX(-105%);
-    transform: translateX(-105%);
-    -webkit-transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
-    -moz-transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
-    transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
-    background: url(../assets/wiggle-white.svg) repeat-x center center/7px 3px;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-.menu-item:hover ::after {
-    transform: translateX(0);
-    will-change: transform;
-}
-
-.menu-item:hover::after {
-    scale: 1;
-} */
