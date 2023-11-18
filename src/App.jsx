@@ -26,7 +26,7 @@ const App = () => {
 
           <Routes>
             <Route
-              path="/"
+              path=""
               element={
                 <HomePage />
               }
