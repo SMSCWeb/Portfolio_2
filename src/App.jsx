@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import ServicePage from './ServicePage';
@@ -22,54 +22,66 @@ const App = () => {
     <>
       <BrowserRouter>
         {showContent && <NavBar />}
-        <Loader hideLoader={toggleContent}>
-
-          <Routes>
-            <Route
-              path="/"
-              element={
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Loader>
                 <HomePage />
-              }
-            />
-            <Route
-              path="about"
-              element={
+                
+              </Loader>
+            }
+          />
+          <Route
+            path="about"
+            element={
+              <Loader hideLoader={toggleContent}>
                 <AboutPage />
-              }
-            />
-            <Route
-              path="service"
-              element={
+              </Loader>
+            }
+          />
+          <Route
+            path="service"
+            element={
+              <Loader hideLoader={toggleContent}>
                 <ServicePage />
-              }
-            />
-            <Route
-              path="project"
-              element={
+              </Loader>
+            }
+          />
+          <Route
+            path="project"
+            element={
+              <Loader hideLoader={toggleContent}>
                 <ProjectPage />
-              }
-            />
-            <Route
-              path="client"
-              element={
+              </Loader>
+            }
+          />
+          <Route
+            path="client"
+            element={
+              <Loader hideLoader={toggleContent}>
                 <ClientPage />
-              }
-            />
-            <Route
-              path="contact"
-              element={
+              </Loader>
+            }
+          />
+          <Route
+            path="contact"
+            element={
+              <Loader hideLoader={toggleContent}>
                 <ContactPage />
-              }
-            />
-            <Route
-              path="career"
-              element={
+              </Loader>
+            }
+          />
+          <Route
+            path="career"
+            element={
+              <Loader hideLoader={toggleContent}>
                 <CareerPage />
-              }
-            />
-          </Routes>
-          {showContent && <Footer />}
-        </Loader>
+              </Loader>
+            }
+          />
+        </Routes>
+        {showContent && <Footer />}
       </BrowserRouter>
     </>
   );
