@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {  HashRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import ServicePage from './ServicePage';
@@ -20,10 +20,10 @@ const App = () => {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
+          {showContent && <NavBar />}
         <Loader hideLoader={toggleContent}>
 
-          {showContent && <NavBar />}
           <Routes>
             <Route
               path="/"
@@ -70,7 +70,7 @@ const App = () => {
           </Routes>
           {showContent && <Footer />}
         </Loader>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };
