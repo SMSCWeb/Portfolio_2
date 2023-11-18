@@ -21,7 +21,7 @@ const App = () => {
   return (
     <>
       <Router>
-        {showContent && <NavBar />}
+        <NavBar />
         <Loader hideLoader={toggleContent}>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -32,7 +32,7 @@ const App = () => {
             <Route path="contact" element={<ContactPage />} />
             <Route path="career" element={<CareerPage />} />
           </Routes>
-          {showContent && <Footer />}
+          <Footer />
         </Loader>
       </Router>
     </>
