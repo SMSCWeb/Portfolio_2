@@ -36,7 +36,7 @@ const jobData = {
                 'Security: Lorem ipsum dolor, sit amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, officiis voluptates dolores aperiam quos accusamus.',
         },
         requiredSkills:
-            'Lorem ipsum dolor sit aLorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, officiis voluptates dolores aperiam quos accusamus.',
+            'Lorem ipsum dolor sit aLorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, officiis voluptates dolores aperiam quos accusamus lorem.',
     },
     3: {
         description: 'POWERAPPS DEVELOPER  Lorem ipsum dolor, sit amet consectetur adipisicing elitLorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, officiis voluptates dolores aperiam quos accusamus.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, officiis voluptates dolores aperiam quos accusamus.',
