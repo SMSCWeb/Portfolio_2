@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {  HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import ServicePage from './ServicePage';
@@ -21,7 +21,7 @@ const App = () => {
   return (
     <>
       <HashRouter>
-          {showContent && <NavBar />}
+        {showContent && <NavBar />}
         <Loader hideLoader={toggleContent}>
 
           <Routes>
@@ -34,37 +34,37 @@ const App = () => {
             <Route
               path="about"
               element={
-                  <AboutPage />
+                <AboutPage />
               }
             />
             <Route
               path="service"
               element={
-                  <ServicePage />
+                <ServicePage />
               }
             />
             <Route
               path="project"
               element={
-                  <ProjectPage />
+                <ProjectPage />
               }
             />
             <Route
               path="client"
               element={
-                  <ClientPage />
+                <ClientPage />
               }
             />
             <Route
               path="contact"
               element={
-                  <ContactPage />
+                <ContactPage />
               }
             />
             <Route
               path="career"
               element={
-                  <CareerPage />
+                <CareerPage />
               }
             />
           </Routes>
