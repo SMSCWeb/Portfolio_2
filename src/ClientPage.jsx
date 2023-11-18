@@ -113,6 +113,7 @@ const ClientPage = () => {
           </div>
         </div>
       </div>
+      <div className='client-page-section'>
       <div className="client-page-container">
         <div className="client-container">
           <div className="client-row">
@@ -125,9 +126,9 @@ const ClientPage = () => {
             ))}
           </div>
         </div>
-
-        {/* <p>testimonial/review</p> */}
       </div >
+      </div>
+
       {/* <Footer /> */}
     </div >
   )
