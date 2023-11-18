@@ -52,7 +52,7 @@
     width: 50%;
     height: 80%;
     position: relative;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .right-section img {
@@ -65,11 +65,10 @@
     cursor: pointer;
     /* transform: scale(1); */
     transition: 0.5s;
+    display: flex;
 }
 
-.header__img img:hover img {
-    scale: 1.1;
-}
+
 
 .image-half-left {
     border-top-left-radius: 50%;
@@ -121,10 +120,12 @@
         height: 50%;
         width: 65%;
     }
-    .hero-title{
+
+    .hero-title {
         font-size: 50px;
     }
-    .greeting{
+
+    .greeting {
         font-size: 50px;
     }
 }

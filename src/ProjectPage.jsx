@@ -9,7 +9,7 @@ import Image3 from "./assets/bg3.jpg";
 import Image4 from "./assets/bg4.jpg";
 import Image5 from "./assets/bg5.jpg";
 import Image6 from "./assets/bg6.jpg";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp, faXmark } from "@fortawesome/free-solid-svg-icons";
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
@@ -40,10 +40,47 @@ const ProjectPage = () => {
   const showContinueProject = () => {
     setShowCompleteSection(false);
   };
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    // You can adjust the scroll position value as needed
+    const showButtonThreshold = 300;
+
+    if (scrollY > showButtonThreshold && !showScrollButton) {
+      setShowScrollButton(true);
+    } else if (scrollY <= showButtonThreshold && showScrollButton) {
+      setShowScrollButton(false);
+    }
+  };
+
+  useEffect(() => {
+    // Attach the scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [showScrollButton]); // Dependency array ensures that the effect runs only when showScrollButton changes
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   return (
     <div>
-      {/* <NavBar /> */}
+      <div className={`scroll-area ${showScrollButton ? 'show' : ''}`} onClick={scrollToTop}>
+        <div className="top-wrap">
+          <div className="go-top-btn-wraper">
+            <div className="go-top go-top-button active">
+              <FontAwesomeIcon icon={faArrowUp} />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="breatcome-area d-flex align-items-center">
         <div className="container">
           <div className="row">
@@ -98,82 +135,82 @@ const ProjectPage = () => {
           </div>
         </div>
         <div className="project-page-container">
-        <div className="project-selection-buttons">
-          <button onClick={showCompleteProject}>Complete Project</button>
-          <button onClick={showContinueProject}>Continue Project</button>
-        </div>
-        {showCompleteSection && (
-          <div className="complete-project-section">
-            <div className="project-container">
-              <div className="project-content">
-                <p className="section-main-title project-page-title">Our Complete Project</p>
-                <p className='hero-description service-description service-page-desc'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum eligendi illo explicabo voluptatem sapiente distinctio vel quasi voluptatibus est, animi nesciunt, temporibus tempore, quidem autem expedita. Sequi obcaecati ex soluta!
-                </p>
-              </div>
-              <div className="gallery">
-                <div className="grid">
-                  {completeImages.map((image, index) => (
-                    <div key={index} className="grid-item">
-                      <div className="grid-item-inner" onClick={() => openModal(image)}>
-                        <img
-                          src={image}
-                          alt={`Image ${index + 1}`}
-                          width={400}
-                          height={300}
-                        />
-                      </div>
-                    </div>
-                  ))}
+          <div className="project-selection-buttons">
+            <button onClick={showCompleteProject}>Complete Project</button>
+            <button onClick={showContinueProject}>Continue Project</button>
+          </div>
+          {showCompleteSection && (
+            <div className="complete-project-section">
+              <div className="project-container">
+                <div className="project-content">
+                  <p className="section-main-title project-page-title">Our Complete Project</p>
+                  <p className='hero-description service-description service-page-desc'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum eligendi illo explicabo voluptatem sapiente distinctio vel quasi voluptatibus est, animi nesciunt, temporibus tempore, quidem autem expedita. Sequi obcaecati ex soluta!
+                  </p>
                 </div>
-                {modalImage && (
-                  <div className="project-modal">
-                    <span className="close-button" onClick={closeModal}>
-                      <FontAwesomeIcon icon={faXmark} />
-                    </span>
-                    <img src={modalImage} alt="Modal Image" />
+                <div className="gallery">
+                  <div className="grid">
+                    {completeImages.map((image, index) => (
+                      <div key={index} className="grid-item">
+                        <div className="grid-item-inner" onClick={() => openModal(image)}>
+                          <img
+                            src={image}
+                            alt={`Image ${index + 1}`}
+                            width={400}
+                            height={300}
+                          />
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                )}
+                  {modalImage && (
+                    <div className="project-modal">
+                      <span className="close-button" onClick={closeModal}>
+                        <FontAwesomeIcon icon={faXmark} />
+                      </span>
+                      <img src={modalImage} alt="Modal Image" />
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        )}
-        {!showCompleteSection && (
-          <div className="continue-project-section">
-            <div className="project-container">
-              <div className="project-content">
-                <p className="section-main-title project-page-title">Our Ongoing Project</p>
-                <p className='hero-description service-description service-page-desc'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum eligendi illo explicabo voluptatem sapiente distinctio vel quasi voluptatibus est, animi nesciunt, temporibus tempore, quidem autem expedita. Sequi obcaecati ex soluta!
-                </p>
-              </div>
-              <div className="gallery">
-                <div className="grid">
-                  {continueImages.map((image, index) => (
-                    <div key={index} className="grid-item">
-                      <div className="grid-item-inner" onClick={() => openModal(image)}>
-                        <img
-                          src={image}
-                          alt={`Image ${index + 1}`}
-                          width={400}
-                          height={300}
-                        />
-                      </div>
-                    </div>
-                  ))}
+          )}
+          {!showCompleteSection && (
+            <div className="continue-project-section">
+              <div className="project-container">
+                <div className="project-content">
+                  <p className="section-main-title project-page-title">Our Ongoing Project</p>
+                  <p className='hero-description service-description service-page-desc'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum eligendi illo explicabo voluptatem sapiente distinctio vel quasi voluptatibus est, animi nesciunt, temporibus tempore, quidem autem expedita. Sequi obcaecati ex soluta!
+                  </p>
                 </div>
-                {modalImage && (
-                  <div className="project-modal">
-                    <span className="close-button" onClick={closeModal}>
-                      <FontAwesomeIcon icon={faXmark} />
-                    </span>
-                    <img src={modalImage} alt="Modal Image" />
+                <div className="gallery">
+                  <div className="grid">
+                    {continueImages.map((image, index) => (
+                      <div key={index} className="grid-item">
+                        <div className="grid-item-inner" onClick={() => openModal(image)}>
+                          <img
+                            src={image}
+                            alt={`Image ${index + 1}`}
+                            width={400}
+                            height={300}
+                          />
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                )}
+                  {modalImage && (
+                    <div className="project-modal">
+                      <span className="close-button" onClick={closeModal}>
+                        <FontAwesomeIcon icon={faXmark} />
+                      </span>
+                      <img src={modalImage} alt="Modal Image" />
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
         </div>
-        
+
       </div>
       {/* <Footer /> */}
     </div>

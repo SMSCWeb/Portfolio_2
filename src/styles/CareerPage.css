@@ -14,10 +14,56 @@
     height: 100%;
 }
 
-.career-right-section .form_box label {
+.career-right-section video {
+    height: 100%;
+    width: 100%;
+}
+
+.page-intro-left h5 {
+    font-size: 16px;
+    text-decoration: none;
+    color: #565656;
+}
+
+.job-categories-container {
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
+    gap: 50px;
+}
+
+.job-categories-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.job-catagories-list {
+    display: flex;
+    gap: 50px;
+}
+
+.category-name {
+    cursor: pointer;
+}
+
+.job-data {
+    padding: 50px;
+    background: #f7f7f7;
+}
+
+.job-data-item-heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #d7a449;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.career-btn .hero-description a {
+    color: #56c2f8;
 }
 
 @media screen and (max-width: 1440px) {
@@ -28,11 +74,19 @@
 
 /* Responsive styles for screen width up to 1024px */
 @media screen and (max-width: 1024px) {
-    /* .carrer-page-container {
+    .carrer-page-container {
         flex-direction: column;
     }
 
-    .career-left-section {
+    .job-categories-container .section-main-title {
+        font-size: 40px;
+    }
+
+    .job-catagories-list {
+        flex-direction: column;
+    }
+
+    /*.career-left-section {
         width: 100%;
     }
 
@@ -62,6 +116,7 @@
     .carrer-page-container {
         flex-direction: column;
         overflow-x: hidden;
+        padding: 20px;
     }
 
     .career-left-section {
@@ -70,5 +125,18 @@
 
     .career-right-section {
         width: 100%;
+    }
+    .job-data{
+        padding: 20px;
+        padding-top: 10px;
+    }
+    .job-data-list{
+        padding: 0;
+    }
+    .job-categories-container .section-main-title {
+        font-size: 20px;
+    }
+    .career-btn{
+        padding-left: 10px;
     }
 }

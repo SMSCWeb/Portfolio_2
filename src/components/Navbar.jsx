@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../styles/Navbar.css"
 import Logo from "../assets/logo.png"
+import LogoWhite from "../assets/logo-white.png"
 import { Link } from 'react-router-dom';
 const NavBar = () => {
     const [burgerActive, setBurgerActive] = useState(false);
@@ -51,7 +52,9 @@ const NavBar = () => {
     return (
         <header className={`header ${scrolling ? 'on-scroll' : ''}`} id="header">
             <nav className="navbar container">
-                <a href="/" className="brand"><img src={Logo} alt="" /></a>
+                <Link to="/" className="brand">
+                    <img src={scrolling ? LogoWhite : Logo} alt="" />
+                </Link>
                 <div className={`burger ${burgerActive ? 'is-active' : ''}`} id="burger">
                     <span className="burger-line"></span>
                     <span className="burger-line"></span>
@@ -93,7 +96,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <Link to="/contact">
-                    <button className='btn'>
+                    <button className={`btn nav-btn ${scrolling ? 'on-scroll' : ''}`}>
                         Contact Us
                     </button>
                 </Link>

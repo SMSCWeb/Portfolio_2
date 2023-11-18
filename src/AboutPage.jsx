@@ -1,12 +1,54 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image1 from "./assets/bg1.jpg";
 import "./styles/AboutPage.css"
 import NavBar from './components/Navbar'
 import { Link } from 'react-router-dom'
 import Footer from './components/Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 const AboutPage = () => {
+    const [showScrollButton, setShowScrollButton] = useState(false);
+
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+        // You can adjust the scroll position value as needed
+        const showButtonThreshold = 300;
+
+        if (scrollY > showButtonThreshold && !showScrollButton) {
+            setShowScrollButton(true);
+        } else if (scrollY <= showButtonThreshold && showScrollButton) {
+            setShowScrollButton(false);
+        }
+    };
+
+    useEffect(() => {
+        // Attach the scroll event listener when the component mounts
+        window.addEventListener('scroll', handleScroll);
+
+        // Remove the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [showScrollButton]); // Dependency array ensures that the effect runs only when showScrollButton changes
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
     return (
         <div>
+            <div className={`scroll-area ${showScrollButton ? 'show' : ''}`} onClick={scrollToTop}>
+                <div className="top-wrap">
+                    <div className="go-top-btn-wraper">
+                        <div className="go-top go-top-button active">
+                            <FontAwesomeIcon icon={faArrowUp} />
+                            {/* <FontAwesomeIcon icon={faArrowUp} /> */}
+                        </div>
+                    </div>
+                </div>
+            </div>
             {/* <NavBar /> */}
             <div className="breatcome-area d-flex align-items-center">
                 <div className="container">

@@ -12,10 +12,22 @@ const Service = () => {
         <div className="service-container">
             <div className="service-left-section">
                 <div className="service-images">
-                    <img src={Image1} alt="Image 1" />
-                    <img src={Image2} alt="Image 2" className='image-full' />
-                    <img src={Image3} alt="Image 3" className='image-full' />
-                    <img src={Image4} alt="Image 4" />
+                    <div className="grid-img">
+
+                        <img src={Image1} alt="Image 1" />
+                    </div>
+                    <div className="grid-img">
+
+                        <img src={Image2} alt="Image 2" className='image-full' />
+                    </div>
+                    <div className="grid-img">
+
+                        <img src={Image3} alt="Image 3" className='image-full' />
+                    </div>
+                    <div className="grid-img">
+
+                        <img src={Image4} alt="Image 4" />
+                    </div>
                 </div>
             </div>
             <div className="service-right-section">

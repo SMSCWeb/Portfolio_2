@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image1 from "../assets/bg1.jpg";
 import Image2 from "../assets/bg2.jpg";
 import Image3 from "../assets/bg3.jpg";
@@ -6,6 +6,24 @@ import Image4 from "../assets/bg4.jpg";
 import "../styles/Hero.css"
 import { Link } from 'react-router-dom';
 const Hero = () => {
+    // const [imagesLoaded, setImagesLoaded] = useState(false);
+
+    // useEffect(() => {
+    //     // Display loader for 1 second before updating imagesLoaded
+    //     const loaderTimeout = setTimeout(() => {
+    //         setImagesLoaded(true);
+    //     }, 10000);
+
+    //     // Clear the timeout if the component unmounts
+    //     return () => clearTimeout(loaderTimeout);
+    // }, []); // Run this effect only once when the component mounts
+
+    // const handleImageLoad = () => {
+    //     // Check if all images are loaded
+    //     if (!imagesLoaded) {
+    //         // setImagesLoaded(true);
+    //     }
+    // };
     return (
         <main className="main">
             <section className="banner-section">
@@ -21,33 +39,41 @@ const Hero = () => {
                     </Link>
                 </div>
                 <div className="right-section">
-                {/* <div className="header__img"> */}
-                    <img
-                        src={Image1}
-                        alt="1"
-                        className='image-half-left'
 
-                    />
-                    <img
-                        src={Image2}
-                        alt="2"
-                        className='image-full'
+                    <div className="grid-img">
+                        <img
+                            src={Image1}
+                            alt="1"
+                            className='image-half-left'
+                        // onLoad={handleImageLoad}
+                        />
+                    </div>
+                    <div className="grid-img">
+                        <img
+                            src={Image2}
+                            alt="2"
+                            className='image-full'
 
+                        // onLoad={handleImageLoad}
+                        />
+                    </div>
+                    <div className="grid-img">
+                        <img
+                            src={Image3}
+                            alt="2"
+                            className='image-full'
 
-                    />
-                    <img
-                        src={Image3}
-                        alt="3"
-                        className='image-full'
-
-
-                    />
-                    <img
-                        src={Image4}
-                        alt="4"
-                        className='image-half-right'
-                    />
-                {/* </div> */}
+                        // onLoad={handleImageLoad}
+                        />
+                    </div>
+                    <div className="grid-img">
+                        <img
+                            src={Image4}
+                            alt="4"
+                            className='image-half-right'
+                        // onLoad={handleImageLoad}
+                        />
+                    </div>
                 </div>
             </section>
         </main>
