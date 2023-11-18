@@ -21,66 +21,55 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        {showContent && <NavBar />}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Loader hideLoader={toggleContent}>
+        <Loader hideLoader={toggleContent}>
+
+          {showContent && <NavBar />}
+          <Routes>
+            <Route
+              path="/"
+              element={
                 <HomePage />
-              </Loader>
-            }
-          />
-          <Route
-            path="about"
-            element={
-              <Loader hideLoader={toggleContent}>
-                <AboutPage />
-              </Loader>
-            }
-          />
-          <Route
-            path="service"
-            element={
-              <Loader hideLoader={toggleContent}>
-                <ServicePage />
-              </Loader>
-            }
-          />
-          <Route
-            path="project"
-            element={
-              <Loader hideLoader={toggleContent}>
-                <ProjectPage />
-              </Loader>
-            }
-          />
-          <Route
-            path="client"
-            element={
-              <Loader hideLoader={toggleContent}>
-                <ClientPage />
-              </Loader>
-            }
-          />
-          <Route
-            path="contact"
-            element={
-              <Loader hideLoader={toggleContent}>
-                <ContactPage />
-              </Loader>
-            }
-          />
-          <Route
-            path="career"
-            element={
-              <Loader hideLoader={toggleContent}>
-                <CareerPage />
-              </Loader>
-            }
-          />
-        </Routes>
-        {showContent && <Footer />}
+              }
+            />
+            <Route
+              path="about"
+              element={
+                  <AboutPage />
+              }
+            />
+            <Route
+              path="service"
+              element={
+                  <ServicePage />
+              }
+            />
+            <Route
+              path="project"
+              element={
+                  <ProjectPage />
+              }
+            />
+            <Route
+              path="client"
+              element={
+                  <ClientPage />
+              }
+            />
+            <Route
+              path="contact"
+              element={
+                  <ContactPage />
+              }
+            />
+            <Route
+              path="career"
+              element={
+                  <CareerPage />
+              }
+            />
+          </Routes>
+          {showContent && <Footer />}
+        </Loader>
       </BrowserRouter>
     </>
   );
