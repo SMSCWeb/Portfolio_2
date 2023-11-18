@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import ServicePage from './ServicePage';
@@ -20,69 +20,21 @@ const App = () => {
 
   return (
     <>
-      <BrowserRouter>
+      <Router>
         {showContent && <NavBar />}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Loader>
-                <HomePage />
-                
-              </Loader>
-            }
-          />
-          <Route
-            path="about"
-            element={
-              <Loader hideLoader={toggleContent}>
-                <AboutPage />
-              </Loader>
-            }
-          />
-          <Route
-            path="service"
-            element={
-              <Loader hideLoader={toggleContent}>
-                <ServicePage />
-              </Loader>
-            }
-          />
-          <Route
-            path="project"
-            element={
-              <Loader hideLoader={toggleContent}>
-                <ProjectPage />
-              </Loader>
-            }
-          />
-          <Route
-            path="client"
-            element={
-              <Loader hideLoader={toggleContent}>
-                <ClientPage />
-              </Loader>
-            }
-          />
-          <Route
-            path="contact"
-            element={
-              <Loader hideLoader={toggleContent}>
-                <ContactPage />
-              </Loader>
-            }
-          />
-          <Route
-            path="career"
-            element={
-              <Loader hideLoader={toggleContent}>
-                <CareerPage />
-              </Loader>
-            }
-          />
-        </Routes>
-        {showContent && <Footer />}
-      </BrowserRouter>
+        <Loader hideLoader={toggleContent}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="service" element={<ServicePage />} />
+            <Route path="project" element={<ProjectPage />} />
+            <Route path="client" element={<ClientPage />} />
+            <Route path="contact" element={<ContactPage />} />
+            <Route path="career" element={<CareerPage />} />
+          </Routes>
+          {showContent && <Footer />}
+        </Loader>
+      </Router>
     </>
   );
 };
