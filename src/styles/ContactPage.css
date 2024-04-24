@@ -79,7 +79,7 @@ textarea::placeholder {
 
 .socialLinks ul li a {
     display: inline-block;
-    color: #d7a449;
+    color: var(--color-5-black);
     height: 50px;
     width: 50px;
     line-height: 31px;
@@ -105,7 +105,7 @@ textarea::placeholder {
     top: 0;
     height: 100%;
     width: 0%;
-    background: #d7a449;
+    background: var(--color-3);
     border-radius: 50%;
     z-index: -1;
     transition: .5s;
@@ -116,7 +116,7 @@ textarea::placeholder {
 }
 
 .socialLinks ul li a:hover {
-    background: #d7a449;
+    background: var(--color-3);
     color: #fff;
 }
 

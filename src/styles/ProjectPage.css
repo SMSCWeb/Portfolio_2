@@ -4,7 +4,7 @@
     font-size: 16px;
     text-decoration: none;
     color: #fff;
-    background-color: #333;
+    background-color: var(--color-3);
     padding: 10px 15px;
     border-radius: 5px;
     text-align: center;
@@ -50,7 +50,7 @@
 }
 
 .section-sub-title h5 {
-    color: #333;
+    color: var(--color-3);
 }
 
 .section-main-title {
@@ -64,7 +64,7 @@
 .dreamhub-btn a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: var(--color-3);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;

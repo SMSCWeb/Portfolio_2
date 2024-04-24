@@ -82,7 +82,7 @@ footer .logo {
 
 .footer .widget2 .media span {
     font-size: 12px;
-    color: #ffb606;
+    color: var(--color-5-black);
     text-transform: uppercase;
     margin-top: 15px;
     display: block;
@@ -106,7 +106,7 @@ footer .logo {
 .footer .widget3 ul li a:hover,
 .footer .widget4 ul li a:hover,
 .footer .widget2 a:hover p {
-    color: #ffb606;
+    color: var(--color-1-white);
 }
 
 /* Styling for widget headings in the footer */
@@ -137,4 +137,8 @@ footer .logo {
 .img-fluid{
     max-width: 50% !important;
     height: auto;
+}
+.footer-name{
+    color: var(--color-1-white);
+    text-decoration: underline !important; 
 }

@@ -40,7 +40,8 @@
     left: 0px;
     width: 108%;
     clip-path: polygon(0 0, 102% 102%, 0 102%);
-    background: #d7a44959;
+    background: var(--color-2);
+    opacity: 0.5;
     transition: all 400ms ease;
     transform: scale(0);
     transform-origin: bottom left;

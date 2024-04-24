@@ -22,7 +22,7 @@
 .page-intro-left h5 {
     font-size: 16px;
     text-decoration: none;
-    color: #565656;
+    color: var(--color-3);
 }
 
 .job-categories-container {
@@ -57,13 +57,14 @@
 .job-data-item-heading {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #d7a449;
+    color: var(--color-5-black);
     font-weight: 500;
     text-transform: uppercase;
 }
 
 .career-btn .hero-description a {
-    color: #56c2f8;
+    color: var(--color-5-black);
+    text-decoration: underline !important;
 }
 
 @media screen and (max-width: 1440px) {

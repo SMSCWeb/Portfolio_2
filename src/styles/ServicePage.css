@@ -21,18 +21,18 @@
 .services-details-content h3 {
     font-size: 24px;
     margin-top: 20px;
-    color: #d7a449;
+    color: var(--color-5-black);
 }
 
 .services-details-content p {
-    font-size: 16px;
+    font-size: 1.4rem;
     line-height: 1.6;
 }
 
 .features-text h4 {
     font-size: 20px;
     margin-top: 30px;
-    color: #d7a449;
+    color: var(--color-5-black);
 }
 
 .service-features-list {
@@ -43,7 +43,7 @@
 
 .service-features-list li {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
 }
@@ -51,7 +51,7 @@
 .service-features-list i {
     margin-right: 10px;
     font-size: 20px;
-    color: #333;
+    color: var(--color-3);
 }
 
 /* Widget styles for the services details sidebar */
@@ -67,7 +67,7 @@
 .widget-title {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #d7a449;
+    color: var(--color-5-black);
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -83,10 +83,9 @@
 }
 
 .widget_categories ul li {
-    font-size: 16px;
+    font-size: 1.4rem;
     text-decoration: none;
-    color: #565656;
-    font-weight: bold;
+    color: var(--color-3);
 }
 
 .widget_categories ul li:hover {
@@ -99,17 +98,17 @@
 .widget_download_btn a {
     display: block;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 1.4rem;
     text-decoration: none;
     color: #fff;
-    background-color: #333;
+    background-color: var(--color-3);
     padding: 10px 15px;
     border-radius: 5px;
     text-align: center;
 }
 
 .widget_download_btn a.active {
-    background-color: #333;
+    background-color: var(--color-3);
 }
 
 .widget_download_btn a.default-btn {
@@ -118,7 +117,7 @@
 .services-details-content .features-text .service-features-list li {
     display: inline-block;
     color: #0b0b31;
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: 600;
     background-color: #ffffff;
     padding: 14px 15px;
@@ -134,10 +133,10 @@
 .services-button{
     margin-bottom: 10px;
     margin-right: 18px;
-    font-size: 16px;
+    font-size: 1.4rem;
     text-decoration: none;
     color: #fff;
-    background-color: #333;
+    background-color: var(--color-3);
     padding: 10px 15px;
     border-radius: 5px;
     text-align: center;

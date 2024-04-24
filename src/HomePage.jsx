@@ -58,7 +58,7 @@ const HomePage = () => {
             <About />
             <Service />
             <Project />
-            <Client />
+            {/* <Client /> */}
             {/* <Footer /> */}
         </div>
     )

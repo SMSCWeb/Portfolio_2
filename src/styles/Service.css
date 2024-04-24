@@ -44,7 +44,7 @@
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
-    border-top: 5px solid #007bff;
+    border-top: 5px solid var(--color-5-black);
     border-radius: 4px;
 }
 .service-btn{
@@ -114,7 +114,7 @@
         height: 90%;
         position: relative;
         transition: all 0.2s ease-in-out;
-        border-top: 5px solid #007bff;
+        border-top: 5px solid var(--color-5-black);
     }
 
     .service-content:hover {
