@@ -36,9 +36,9 @@ const Project = () => {
 
         <div className="project-container">
             <div className="project-content">
-                <div className="section-main-title">Our Work</div>
+                <div className="section-main-title">Our Work : Explore Our Active Projects</div>
                 <hr />
-                <p className='hero-description service-description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum eligendi illo explicabo voluptatem sapiente distinctio vel quasi voluptatibus est, animi nesciunt, temporibus tempore, quidem autem expedita. Sequi obcaecati ex soluta!
+                <p className='hero-description service-description'>At S M Service Consultancy, we're not just about promises; we're about delivering tangible results. Currently, our team is fully engaged in several dynamic projects across various sectors, showcasing our expertise and commitment to excellence in action.
                 </p>
             </div>
 

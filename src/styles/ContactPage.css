@@ -1,5 +1,8 @@
-/* Basic styling for the contact form */
-/* Style for the contact page container */
+::selection {
+    color: var(--color-1-white);
+    background: var(--color-5-black);
+}
+
 .contact-page-container {
     display: flex;
     align-items: center;

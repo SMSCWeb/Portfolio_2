@@ -1,3 +1,8 @@
+::selection {
+    color: var(--color-1-white);
+    background: var(--color-5-black);
+}
+
 .project-selection-buttons button {
     margin-bottom: 10px;
     margin-right: 18px;

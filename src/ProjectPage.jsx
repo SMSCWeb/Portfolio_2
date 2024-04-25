@@ -124,10 +124,7 @@ const ProjectPage = () => {
                     <h1>business needs.</h1>
                   </div>
                   <p className="section-title-desc">
-                    Compellingly deploy standards compliant manufactured products
-                    via world an expanded array of total linkage. assertively
-                    disintermediate amear sonar granular sources through reliable
-                    ami.
+                  Discover the culmination of expertise and dedication at S M Service Consultancy. From pioneering urban infrastructure projects to innovative industrial solutions, our portfolio showcases a diverse range of successful endeavours. Each project exemplifies our commitment to excellence, innovation, and client satisfaction. Dive into our works and witness the transformative power of our solutions.
                   </p>
                 </div>
               </div>
@@ -144,7 +141,7 @@ const ProjectPage = () => {
               <div className="project-container">
                 <div className="project-content">
                   <p className="section-main-title project-page-title">Our Complete Project</p>
-                  <p className='hero-description service-description service-page-desc'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum eligendi illo explicabo voluptatem sapiente distinctio vel quasi voluptatibus est, animi nesciunt, temporibus tempore, quidem autem expedita. Sequi obcaecati ex soluta!
+                  <p className='hero-description service-description service-page-desc'>At S M Service Consultancy, we take pride in our track record of successfully completed projects. Each endeavour represents a testament to our commitment to excellence and client satisfaction. Explore our portfolio of completed projects to see firsthand the impactful solutions we've delivered across various industries. From inception to execution, trust us to bring your vision to life.
                   </p>
                 </div>
                 <div className="gallery">

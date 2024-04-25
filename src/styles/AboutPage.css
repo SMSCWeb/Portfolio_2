@@ -1,3 +1,8 @@
+::selection {
+    color: var(--color-1-white);
+    background: var(--color-5-black);
+}
+
 .breatcome-area {
     padding: 90px 0 90px;
     background: url(../assets/bg-img.png);
@@ -140,7 +145,7 @@
         flex-direction: column;
         padding: 50px;
     }
-    
+
     .profile:nth-child(2),
     .profile:nth-child(4),
     .profile:nth-child(6) {

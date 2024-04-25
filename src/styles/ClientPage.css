@@ -1,3 +1,8 @@
+::selection {
+    color: var(--color-1-white);
+    background: var(--color-5-black);
+}
+
 .client-container {
     text-align: center;
     height: 100%;
@@ -65,7 +70,7 @@
         /* Adjust the width as needed */
     }
 
-    .client-container{
+    .client-container {
         height: 100%;
     }
 }
@@ -76,7 +81,8 @@
         margin: 10px;
         padding: 5px;
     }
-    .client-container{
+
+    .client-container {
         height: 100%;
     }
 }

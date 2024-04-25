@@ -18,9 +18,9 @@ const About = () => {
                             <h5>ABOUT COMPANY</h5>
                         </div>
                         <div className="section-main-title">
-                            <p>We Are The Leader In The Interiores</p>
+                            <p>Expert in Building Engineering</p>
                         </div>
-                        <p className="hero-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                        <p className="hero-description">Proficient in innovative building engineering solutions, we optimize structures for efficiency, sustainability, and safety. Elevate your projects with our expertise and experience.</p>
 
                         <Link to="/about">
                             <button className="btn">

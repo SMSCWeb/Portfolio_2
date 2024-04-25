@@ -22,10 +22,7 @@ const Footer = () => {
                                     <img src={Logo} className="img-fluid" alt="" />
                                 </div>
                                 <p>
-                                    In eu libero ligula. Fusce eget metus lorem, ac viverra leo.
-                                    Nullam convallis, arcu vel pellentesque sodales, nisi est
-                                    varius diam, ac ultrices sem ante quis sem. Proin ultricies
-                                    volutpat sapien.
+                                    At S M Service Consultancy, we recognize that success lies not only in technical proficiency but also in fostering meaningful client relationships. We prioritize clear communication, collaboration, and transparency throughout every stage of our partnership, ensuring that our clients are not just satisfied but empowered by our solutions.
                                 </p>
                                 <div className="socialLinks">
                                     <ul>

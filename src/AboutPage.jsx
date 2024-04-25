@@ -84,9 +84,9 @@ const AboutPage = () => {
                 <div className="about-right-section">
                     <div className="section-title text-left">
                         <div className="section-main-title">
-                            <p>We Are The Leader In The Interiores</p>
+                            <p>Expert in Building Engineering</p>
                         </div>
-                        <p className="hero-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                        <p className="hero-description">Our team comprises individuals who have honed their skills through years of hands-on experience, ensuring that every project we undertake benefits from a wealth of knowledge and a keen understanding of industry nuances. From intricate logistical challenges to strategic planning, we have navigated the complexities of various sectors with finesse, delivering results that exceed expectations time and again.</p>
                     </div>
                 </div>
             </section>

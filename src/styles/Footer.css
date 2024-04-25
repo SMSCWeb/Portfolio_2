@@ -1,3 +1,7 @@
+::selection {
+    color: var(--color-5-black) !important;
+    background: var(--color-1-white) !important;
+}
 
 /* Styling for the footer section */
 .footer {
@@ -6,13 +10,16 @@
     overflow-x: hidden;
     padding-bottom: 0;
 }
-.footer .container .row{
-    justify-content: space-between ;
+
+.footer .container .row {
+    justify-content: space-between;
 }
-.footer a{
+
+.footer a {
     list-style: none;
     text-decoration: none;
 }
+
 /* Styling for footer widget1 paragraph */
 .footer .widget1 p {
     font-size: 16px;
@@ -30,7 +37,7 @@
     display: inline-block;
 }
 
-.socialLinks ul li a  {
+.socialLinks ul li a {
     display: block;
     margin: 0 2px;
     width: 40px;
@@ -61,9 +68,11 @@ footer .logo {
     color: #fff;
     font-size: 21px;
 }
-.footer ul{
+
+.footer ul {
     padding: 0;
 }
+
 /* Styling for media in footer widget2 */
 .footer .widget2 .media img {
     margin-right: 20px;
@@ -134,11 +143,13 @@ footer .logo {
 .copyRightArea p {
     color: rgba(255, 255, 255, 0.6);
 }
-.img-fluid{
+
+.img-fluid {
     max-width: 50% !important;
     height: auto;
 }
-.footer-name{
+
+.footer-name {
     color: var(--color-1-white);
-    text-decoration: underline !important; 
+    text-decoration: underline !important;
 }
