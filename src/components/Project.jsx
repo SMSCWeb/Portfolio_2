@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import "../styles/Project.css"
-import Image1 from "../assets/bg1.jpg";
-import Image2 from "../assets/bg2.jpg";
-import Image3 from "../assets/bg3.jpg";
-import Image4 from "../assets/bg4.jpg";
-import Image5 from "../assets/bg5.jpg";
-import Image6 from "../assets/bg6.jpg";
+import Image1 from "../assets/bg_image/bg23.jpeg";
+import Image2 from "../assets/bg_image/bg24.jpg";
+import Image3 from "../assets/bg_image/bg25.png";
+import Image4 from "../assets/bg_image/bg26.jpg";
+import Image5 from "../assets/bg_image/bg27.jpg";
+import Image6 from "../assets/bg_image/bg29.jpg";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 

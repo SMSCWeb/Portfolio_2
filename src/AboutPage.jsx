@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Image1 from "./assets/bg1.jpg";
+import Image1 from "./assets/bg_image/bg22.png";
 import "./styles/AboutPage.css"
-import NavBar from './components/Navbar'
 import { Link } from 'react-router-dom'
 import Footer from './components/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

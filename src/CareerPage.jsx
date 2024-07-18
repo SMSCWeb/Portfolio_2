@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import "./styles/CareerPage.css"
-import Image1 from "./assets/bg1.jpg";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import jobData from './components/JobData';
+import CADDesignerImage from "./assets/Career/job1.jpeg"
+import CADExpertImage from "./assets/Career/job2.jpeg"
 
 const CareerPage = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
-  const [activeJobCategory, setActiveJobCategory] = useState(1);
   const handleScroll = () => {
     const scrollY = window.scrollY;
     // You can adjust the scroll position value as needed
@@ -41,28 +40,7 @@ const CareerPage = () => {
 
 
 
-  const jobCategories = [
-    { id: 1, name: 'ADABAS-Natural Technical SME', location: 'Location: Santa Fe Province, Rosario', creationDate: '2023-10-25' },
-    { id: 2, name: 'AWS Cloud Engineer', location: 'Florida, Fort Lauderdale', creationDate: '2023-09-29' },
-    { id: 3, name: 'PowerApps Developer', location: 'Kolkata, West Bengal', creationDate: '2023-12-10' },
-    // Add more categories as needed
-  ];
 
-  const renderJobCategories = () => {
-    return jobCategories.map((category) => (
-      <div
-        key={category.id}
-        className={`category-btn ${activeJobCategory === category.id ? 'active' : ''}`}
-        onClick={() => setActiveJobCategory(category.id)}
-      >
-        <div className='job-catagory-details'>
-          <p className="category-name widget-title">{category.name}</p>
-          <p className="location">{category.location}</p>
-          <p className="creation-date">Creation date: {category.creationDate}</p>
-        </div>
-      </div>
-    ));
-  };
   return (
     <div>
       <div className={`scroll-area ${showScrollButton ? 'show' : ''}`} onClick={scrollToTop}>
@@ -98,18 +76,40 @@ const CareerPage = () => {
           </div>
         </div>
       </div>
+      <div className='career-page-header'>
+        <div className="section-main-title"> <h1>
+          Shape the future of transportation with SMSC!
+        </h1>
+        </div>
+
+        <div className="d-11-col t-8-col p-6-col page-intro-description heading4 light-text after-50-px-wide after-25-px-phone">
+          <p className='hero-description'>Are you looking for a career that's both exciting and impactful? At SMSC, we offer a unique opportunity to collaborate with a passionate team and deliver innovative transport solutions.</p>
+        </div>
+      </div>
       <div className='carrer-page-container'>
         <div className="career-left-section">
           <div className="t-5-col p-6-col d-8-col page-intro-left">
-            <div className="section-main-title"> <h1>
-              Looking to be part of an exciting and growing Transport Advisory business?
-            </h1>
-            </div>
-            <h5>WHY US?</h5>
 
+            <h5>Here's what makes SMSC stand out:</h5>
             <div className="d-11-col t-8-col p-6-col page-intro-description heading4 light-text after-50-px-wide after-25-px-phone">
-              <p className='hero-description'>You’ll collaborate side by side with different team members and as “one team” deliver thoughtful transport solutions. You’ll be exposed to a wide variety of transport projects and clients, and most importantly you’ll have a say in the types of projects you want to work on and how the company evolves. <br />We’re also a pretty flexible team whether it is working from the office or home, though you might want to make it in time for the morning team coffee run!</p>
+              <p className='hero-description'><span className='job-data-item-heading'>Collaborative Environment:</span> We believe in teamwork! You'll work side-by-side with talented colleagues from diverse backgrounds, fostering a truly collaborative "one team" approach.
+              </p>
+              <p className='hero-description'><span className='job-data-item-heading'>Project Variety:</span>  Gain exposure to a wide range of transportation projects and clients. No two days will be the same!
+              </p>
+              <p className='hero-description'><span className='job-data-item-heading'>Shaping the Future:</span>   We value your input! You'll have a say in the types of projects you work on and how SMSC evolves as a company.
+              </p>
+              <p className='hero-description'>
+                <span className='job-data-item-heading'>Flexible Work:</span>
+                We embrace a flexible work style. Whether you prefer the office or remote work, we can accommodate your needs (but don't miss the morning team coffee run – it's legendary!).
+              </p>
             </div>
+
+            <p className='hero-description'>If you're a passionate and motivated individual looking to make a difference in the transportation industry, SMSC is the place for you!
+              <br />
+              <br />
+              Join our team and help us shape the future of transportation!
+            </p>
+
 
           </div>
         </div>
@@ -118,55 +118,47 @@ const CareerPage = () => {
         </div>
       </div>
       <div className='job-categories-container'>
+
         <h5 className='section-main-title'>CURRENT OPENINGS</h5>
-        <div className="job-categories-btn">
-          <div className='job-catagories-list'>
-            {renderJobCategories()}
+        <div className='job-categories'>
+          <div className='job-category'>
+            <img src={CADDesignerImage} alt="CAD Designer" width={360} height={520} />
+            {/* <div className='job-details'>
+              <h3 className='category-name widget-title'>CAD Designer</h3>
+              <p>
+                <span className='job-data-item-heading'>Salary:</span>
+                Rs 10,000/- to 12,000/- with incentives
+              </p>
+              <p className='job-data-item-heading'>Min 1 year of field experience in AutoCAD</p>
+              <p className='job-data-item-heading'>6 months training period</p>
+              <p>
+                <span className='job-data-item-heading'>No. of positions:</span>
+                2
+              </p>
+            </div> */}
+          </div>
+          <div className='job-category'>
+            <img src={CADExpertImage} alt="CAD Expert" width={360} height={520} />
+            {/* <div className='job-details'>
+              <h3 className='category-name widget-title'>CAD Expert</h3>
+              <p>
+                <span className='job-data-item-heading'>Salary:</span>
+                Rs 15,000/- to 20,000/- with incentives
+              </p>
+              <p className='job-data-item-heading'>Immediate Joining</p>
+              <p>
+                <span className='job-data-item-heading'>No. of positions:</span>
+                1
+              </p>
+            </div> */}
           </div>
         </div>
-        <div>
-          {activeJobCategory !== null && (
-            <div className="job-data">
-              <ul className="job-data-list">
-                <li className="job-data-item">
-                  <p className='job-data-item-heading'>Description</p>
-                  <p className='hero-description'>{jobData[activeJobCategory].description}</p>
-                </li>
-                <li className="job-data-item">
-                  <p className='job-data-item-heading'>What We Are Looking For:</p>
-                  <p className='hero-description'>{jobData[activeJobCategory].whatWeAreLookingFor}</p>
-                </li>
-                <li className="job-data-item">
-                  <p className='job-data-item-heading'>Position Overview:</p>
-                  <p className='hero-description'>{jobData[activeJobCategory].positionOverview}</p>
-                </li>
-                <li className="job-data-item">
-                  <p className='job-data-item-heading'>Key Responsibilities:</p>
-                  <ul>
-                    {Object.values(jobData[activeJobCategory].keyResponsibilities).map(
-                      (responsibility, index) => (
-                        <li key={index} className="job-responsibilty">
-                          <p className='hero-description'>
-                            {responsibility}
-                          </p>
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </li>
-                <li className="job-data-item">
-                  <p className='job-data-item-heading'>Required Skills :</p>
-                  <p className='hero-description'>{jobData[activeJobCategory].requiredSkills}</p>
-                </li>
-              </ul>
-            </div>
-          )}
-        </div>
+
         <div className='career-btn'>
-        <p className='hero-description'>
-          Mail Your Cv To <a href="mailto:smconsultency@gmail.com">smconsultency@gmail.com</a>
-        </p>
-      </div>
+          <p className='hero-description'>
+            Mail Your Cv To <a href="mailto:smconsultency@gmail.com">smconsultency@gmail.com</a>
+          </p>
+        </div>
       </div>
     </div>
 

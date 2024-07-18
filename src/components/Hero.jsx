@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Image1 from "../assets/bg1.jpg";
-import Image2 from "../assets/bg2.jpg";
-import Image3 from "../assets/bg3.jpg";
-import Image4 from "../assets/bg4.jpg";
+import Image1 from "../assets/bg_image/bg21.jpg";
+import Image2 from "../assets/bg_image/bg22.png";
+import Image3 from "../assets/bg_image/bg33.jpg";
+import Image4 from "../assets/bg_image/bg30.jpg";
 import "../styles/Hero.css"
 import { Link } from 'react-router-dom';
 const Hero = () => {

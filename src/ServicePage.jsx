@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Image1 from "./assets/bg1.jpg";
+import Image1 from "./assets/bg_image/bg3.jpg";
 import "./styles/ServicePage.css";
-import NavBar from "./components/Navbar";
 import { Link } from "react-router-dom";
-import Footer from "./components/Footer";
-import PDF from "./assets/hackerspace.pdf";
-import WORD from "./assets/word.docx";
+import PDF from "./assets/Sm.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-regular-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
@@ -240,14 +237,14 @@ const ServicePage = () => {
                                         >
                                             Download PDF
                                         </a>
-                                        <a
+                                        {/* <a
                                             href={WORD}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="default-btn"
                                         >
                                             Download Word File
-                                        </a>
+                                        </a> */}
                                     </div>
                                 </section>
                             </aside>

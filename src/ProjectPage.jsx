@@ -3,18 +3,31 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import "./styles/ProjectPage.css"
-import Image1 from "./assets/bg1.jpg";
-import Image2 from "./assets/bg2.jpg";
-import Image3 from "./assets/bg3.jpg";
-import Image4 from "./assets/bg4.jpg";
-import Image5 from "./assets/bg5.jpg";
-import Image6 from "./assets/bg6.jpg";
+import Image1 from "./assets/bg_image/bg20.jpeg";
+import Image2 from "./assets/bg_image/bg19.jpg";
+import Image3 from "./assets/bg_image/bg18.jpg";
+import Image4 from "./assets/bg_image/bg17.jpeg";
+import Image5 from "./assets/bg_image/bg16.jpg";
+import Image6 from "./assets/bg_image/bg15.jpg";
+import Image7 from "./assets/bg_image/bg14.jpg";
+import Image8 from "./assets/bg_image/bg13.jpg";
+import Image9 from "./assets/bg_image/bg12.jpg";
+import Image10 from "./assets/bg_image/bg23.jpeg";
+import Image11 from "./assets/bg_image/bg24.jpg";
+import Image12 from "./assets/bg_image/bg25.png";
+import Image13 from "./assets/bg_image/bg26.jpg";
+import Image14 from "./assets/bg_image/bg27.jpg";
+import Image15 from "./assets/bg_image/bg29.jpg";
+import Image16 from "./assets/bg_image/bg30.jpg";
+import Image17 from "./assets/bg_image/bg31.jpg";
+import Image18 from "./assets/bg_image/bg32.png";
+import Image19 from "./assets/bg_image/bg33.jpg";
 import { faArrowUp, faXmark } from "@fortawesome/free-solid-svg-icons";
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
 
-const completeImages = [Image1, Image2, Image3, Image4, Image5, Image6];
+const completeImages = [Image1, Image2, Image3, Image4, Image5, Image6,Image7, Image8, Image9, Image10, Image11, Image12, Image13, Image14,Image15, Image16, Image17, Image18, Image19];
 const continueImages = [Image2, Image5, Image3, Image1, Image6, Image4];
 
 const ProjectPage = () => {
@@ -133,8 +146,8 @@ const ProjectPage = () => {
         </div>
         <div className="project-page-container">
           <div className="project-selection-buttons">
-            <button onClick={showCompleteProject}>Complete Project</button>
-            <button onClick={showContinueProject}>Continue Project</button>
+            {/* <button onClick={showCompleteProject}>Complete Project</button>
+            <button onClick={showContinueProject}>Continue Project</button> */}
           </div>
           {showCompleteSection && (
             <div className="complete-project-section">

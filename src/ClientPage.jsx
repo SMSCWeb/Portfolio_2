@@ -7,6 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 const logos = [
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-1663934796265803595croppedimage10.png',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLE2gjqwcc9jWYr9DY1oey6UmQrOtEBxPsPw&s',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrjxy4LCfmpgHp6uO3_fzflDp1m12qazdYow&s',
+  'https://mani-group.com/wp-content/themes/manigroup/source/images/site-logo.svg',
+  'https://ctc-composites.com/files/assets/images/ctc_both.svg',
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-16639348791902852855croppedimage11.png',
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-16639349632145199982croppedimage12.png',
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-16639350621729014097croppedimage13.png',

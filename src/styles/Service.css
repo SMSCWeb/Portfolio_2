@@ -6,18 +6,20 @@
 .service-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     padding: 50px;
-    gap: 30px;
+    gap: 20px;
     height: 100%;
 }
 
 .service-left-section {
-    width: 50%;
+    width: 45%;
+    margin-top: 120px;
+
 }
 
 .service-right-section {
-    width: 50%;
+    width: 55%;
     height: 100%;
 }
 
@@ -41,10 +43,12 @@
 .service-cards {
     /* flex: 1; */
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
 }
-
+.service-description{
+    text-align: start;
+}
 .service-content {
     margin: 10px;
     border: 1px solid #ccc;
@@ -52,6 +56,8 @@
     text-align: center;
     border-top: 5px solid var(--color-5-black);
     border-radius: 4px;
+    width: 260px;
+    height: 180px;
 }
 
 .service-btn {
@@ -76,6 +82,8 @@
 
     .service-left-section {
         width: 100%;
+    margin-top: 0px;
+
     }
 
     .service-right-section {

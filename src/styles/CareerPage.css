@@ -1,12 +1,20 @@
 ::selection {
     color: var(--color-1-white);
     background: var(--color-5-black);
-  }
+}
+
+.career-page-header {
+    gap: 50px;
+    padding: 50px;
+    padding-bottom: 0;
+}
+
 .carrer-page-container {
     display: flex;
     align-items: center;
     gap: 50px;
     padding: 50px;
+    padding-top: 0;
 }
 
 .career-left-section {
@@ -24,7 +32,7 @@
 }
 
 .page-intro-left h5 {
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
     color: var(--color-3);
 }
@@ -35,6 +43,13 @@
     flex-direction: column;
     align-items: center;
     gap: 50px;
+}
+
+.job-categories {
+    display: flex;
+    gap: 50px;
+    padding: 50px;
+    padding-top: 0;
 }
 
 .job-categories-btn {
@@ -91,6 +106,10 @@
         flex-direction: column;
     }
 
+    .job-categories{
+        flex-direction: column;
+    }
+
     /*.career-left-section {
         width: 100%;
     }
@@ -114,6 +133,9 @@
     .career-right-section {
         width: 100%;
     }
+    .job-categories{
+        flex-direction: column;
+    }
 }
 
 /* Responsive styles for screen width up to 600px */
@@ -131,17 +153,25 @@
     .career-right-section {
         width: 100%;
     }
-    .job-data{
+
+    .job-data {
         padding: 20px;
         padding-top: 10px;
     }
-    .job-data-list{
+
+    .job-data-list {
         padding: 0;
     }
+
     .job-categories-container .section-main-title {
         font-size: 20px;
     }
-    .career-btn{
+
+    .career-btn {
         padding-left: 10px;
+    }
+
+    .job-categories{
+        flex-direction: column;
     }
 }
