@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import "./styles/ContactPage.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faLinkedin, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'react-router-dom'
-import { faArrowUp, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import React, { useEffect, useState } from 'react';
+import './styles/ContactPage.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faLinkedin, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
+import { faArrowUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
+
 const ContactPage = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
-    // You can adjust the scroll position value as needed
     const showButtonThreshold = 300;
 
     if (scrollY > showButtonThreshold && !showScrollButton) {
@@ -20,14 +21,11 @@ const ContactPage = () => {
   };
 
   useEffect(() => {
-    // Attach the scroll event listener when the component mounts
     window.addEventListener('scroll', handleScroll);
-
-    // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [showScrollButton]); // Dependency array ensures that the effect runs only when showScrollButton changes
+  }, [showScrollButton]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -35,6 +33,28 @@ const ContactPage = () => {
       behavior: 'smooth',
     });
   };
+
+  const Submit = (e) => {
+    e.preventDefault();
+    const formEle = document.querySelector('form');
+    const formDatab = new FormData(formEle);
+  
+    axios.post(
+      'https://script.google.com/macros/s/AKfycbxdl3cWVClsKlXcBUnFGnDH8zSHulYDtLY1WF5esMXDYxrBOlHb4yKGhn2Q2QKu7HF0/exec',
+      formDatab
+    )
+      .then((res) => {
+        console.log(res.data);
+        // Reset the form after successful submission
+        formEle.reset();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  
+  
+
   return (
     <div>
       <div className={`scroll-area ${showScrollButton ? 'show' : ''}`} onClick={scrollToTop}>
@@ -77,34 +97,24 @@ const ContactPage = () => {
               <h1>Get a free consultation</h1>
             </div>
             <div className="section-description">
-              <p>For any additional questions regarding the company our our services, feel free to contact us For any additional
-                questions regarding the company our our services.</p>
+              <p>For any additional questions regarding the company or our services, feel free to contact us.</p>
             </div>
             <div className="contact-section-icon">
               <div className="socialLinks">
                 <ul>
                   <li>
                     <a href="https://wa.me/918335041317" target="_blank">
-                      <FontAwesomeIcon
-                        icon={faWhatsapp}
-                        className="fa-whatsapp fab"
-                      />
+                      <FontAwesomeIcon icon={faWhatsapp} className="fa-whatsapp fab" />
                     </a>
                   </li>
                   <li>
                     <a href="mailto:serviceconsultancysm@gmail.com" target="_blank">
-                      <FontAwesomeIcon
-                        icon={faEnvelope}
-                        className="fa-gmail fab"
-                      />
+                      <FontAwesomeIcon icon={faEnvelope} className="fa-gmail fab" />
                     </a>
                   </li>
                   <li>
                     <a href="https://www.linkedin.com/company/s-m-service-consultancy/" target="_blank">
-                      <FontAwesomeIcon
-                        icon={faLinkedin}
-                        className="fab fa-linkedin-in"
-                      />
+                      <FontAwesomeIcon icon={faLinkedin} className="fab fa-linkedin-in" />
                     </a>
                   </li>
                 </ul>
@@ -112,44 +122,40 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-        <div className='contact-right-section'>
+        <div className="contact-right-section">
           <div className="row contact_bg">
             <p>Make an appointment</p>
-            <div className="col-lg-6 col-md-6">
-              <div className="form_box">
-                <input type="text" name="Your name" placeholder="First Name" />
+            <form className="form" onSubmit={(e) => Submit(e)}>
+              <div className="form_box d-flex gap-2">
+                <div className="form-group col-md-6">
+                  <input type="text" name="First" className="form-control" placeholder="First Name" />
+                </div>
+                <div className="form-group col-md-6">
+                  <input type="text" name="Last" className="form-control" placeholder="Last Name" />
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6 col-md-6">
-              <div className="form_box">
-                <input type="text" name="your name" placeholder="Last Name" />
+              <div className="form_box d-flex gap-2">
+                <div className="form-group col-md-6">
+                  <input type="text" name="Email" className="form-control" placeholder="Your Email" />
+                </div>
+                <div className="form-group col-md-6">
+                  <input type="text" name="Phone" className="form-control" placeholder="Your Phone" />
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6 col-md-6">
-              <div className="form_box">
-                <input type="text" name="your email" placeholder="Your Email" />
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-6">
+              <div className='col-lg-12'>
 
               <div className="form_box">
-                <input type="text" name="phone" placeholder="Your Phone" />
+                <textarea name="Message" className="form-control" id="Message" cols="30" rows="5" placeholder="Your Message"></textarea>
               </div>
-            </div>
-            <div className="col-lg-12 ">
-              <div className="form_box">
-                <textarea name="massage" id="massage" cols="30" rows="5" placeholder="Your Massage"></textarea>
+              <button type="submit" className="contact-form-button btn btn-primary">Submit Now</button>
               </div>
-              <div className="contact-form-button btn">
-                <button type="submit">Submit Now<i className="bi bi-arrow-right"></i></button>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
       {/* <Footer /> */}
     </div>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;

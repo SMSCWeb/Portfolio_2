@@ -10,6 +10,11 @@
     padding: 50px;
 }
 
+.form-control:focus{
+    border-color: transparent !important;
+    box-shadow: none !important;;
+}
+
 /* Style for the right section with the image */
 .contact-left-section {
     /* text-align: center; */
