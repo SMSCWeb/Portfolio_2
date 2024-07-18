@@ -156,7 +156,7 @@ const CareerPage = () => {
 
         <div className='career-btn'>
           <p className='hero-description'>
-            Mail Your Cv To <a href="mailto:smconsultency@gmail.com">smconsultency@gmail.com</a>
+            Mail Your Cv To <a href="mailto:jobs@smscmep.com">jobs@smscmep.com</a>
           </p>
         </div>
       </div>

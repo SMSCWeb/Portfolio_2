@@ -3,38 +3,38 @@ import "./styles/ContactPage.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faLinkedin, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faArrowUp, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 const ContactPage = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
 
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-        // You can adjust the scroll position value as needed
-        const showButtonThreshold = 300;
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    // You can adjust the scroll position value as needed
+    const showButtonThreshold = 300;
 
-        if (scrollY > showButtonThreshold && !showScrollButton) {
-            setShowScrollButton(true);
-        } else if (scrollY <= showButtonThreshold && showScrollButton) {
-            setShowScrollButton(false);
-        }
+    if (scrollY > showButtonThreshold && !showScrollButton) {
+      setShowScrollButton(true);
+    } else if (scrollY <= showButtonThreshold && showScrollButton) {
+      setShowScrollButton(false);
+    }
+  };
+
+  useEffect(() => {
+    // Attach the scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
     };
+  }, [showScrollButton]); // Dependency array ensures that the effect runs only when showScrollButton changes
 
-    useEffect(() => {
-        // Attach the scroll event listener when the component mounts
-        window.addEventListener('scroll', handleScroll);
-
-        // Remove the event listener when the component unmounts
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [showScrollButton]); // Dependency array ensures that the effect runs only when showScrollButton changes
-
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   return (
     <div>
       <div className={`scroll-area ${showScrollButton ? 'show' : ''}`} onClick={scrollToTop}>
@@ -84,24 +84,27 @@ const ContactPage = () => {
               <div className="socialLinks">
                 <ul>
                   <li>
-                    <a href="#">
-                      <FontAwesomeIcon icon={faFacebook} className='fab fa-facebook-f' />
+                    <a href="https://wa.me/918335041317" target="_blank">
+                      <FontAwesomeIcon
+                        icon={faWhatsapp}
+                        className="fa-whatsapp fab"
+                      />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                      <FontAwesomeIcon icon={faTwitter} className='fab fa-twitter' />
-
+                    <a href="mailto:serviceconsultancysm@gmail.com" target="_blank">
+                      <FontAwesomeIcon
+                        icon={faEnvelope}
+                        className="fa-gmail fab"
+                      />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                      <FontAwesomeIcon icon={faWhatsapp} className='fa-whatsapp fab' />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <FontAwesomeIcon icon={faLinkedin} className='fab fa-linkedin-in' />
+                    <a href="https://www.linkedin.com/company/s-m-service-consultancy/" target="_blank">
+                      <FontAwesomeIcon
+                        icon={faLinkedin}
+                        className="fab fa-linkedin-in"
+                      />
                     </a>
                   </li>
                 </ul>

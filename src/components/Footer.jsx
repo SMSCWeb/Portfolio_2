@@ -9,6 +9,8 @@ import {
     faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -27,23 +29,7 @@ const Footer = () => {
                                 <div className="socialLinks">
                                     <ul>
                                         <li>
-                                            <a href="#">
-                                                <FontAwesomeIcon
-                                                    icon={faFacebook}
-                                                    className="fab fa-facebook-f"
-                                                />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <FontAwesomeIcon
-                                                    icon={faTwitter}
-                                                    className="fab fa-twitter"
-                                                />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
+                                            <a href="https://wa.me/918335041317" target="_blank">
                                                 <FontAwesomeIcon
                                                     icon={faWhatsapp}
                                                     className="fa-whatsapp fab"
@@ -51,7 +37,15 @@ const Footer = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="mailto:serviceconsultancysm@gmail.com" target="_blank">
+                                                <FontAwesomeIcon
+                                                    icon={faEnvelope}
+                                                    className="fa-gmail fab"
+                                                />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/company/s-m-service-consultancy/" target="_blank">
                                                 <FontAwesomeIcon
                                                     icon={faLinkedin}
                                                     className="fab fa-linkedin-in"
@@ -62,7 +56,7 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-6 col-lg-2">
+                        {/* <div className="col-sm-6 col-lg-2">
                             <div className="widget3">
                                 <h5>Latest News</h5>
                                 <ul>
@@ -86,54 +80,73 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="col-sm-6 col-lg-2">
                             <div className="widget3">
                                 <h5>Quick Links</h5>
                                 <ul>
                                     <li>
-                                        <a href="#">Home</a>
+                                        <Link to="/">Home</Link>
                                     </li>
                                     <li>
-                                        <a href="#">about</a>
+                                        <Link to="/about">About</Link>
                                     </li>
                                     <li>
-                                        <a href="#">contact</a>
+                                        <Link to="/service">Services</Link>
                                     </li>
                                     <li>
-                                        <a href="#">privecy</a>
+                                        <Link to="/project">Project</Link>
                                     </li>
                                     <li>
-                                        <a href="#">skills</a>
+                                        <Link to="/client">Clients</Link>
                                     </li>
                                     <li>
-                                        <a href="#">career</a>
+                                        <Link to="/career">Career</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/contact">Contact Us</Link>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-sm-6 col-lg-2">
                             <div className="widget4">
-                                <h5>Other Links</h5>
+                                <h5>Top Clients</h5>
                                 <ul>
                                     <li>
-                                        <a href="#">themeforest</a>
+                                        <a href="https://www.beyondarchitecture.co.in/" target="_blank">Beyond Architecture</a>
                                     </li>
                                     <li>
-                                        <a href="#">graphicriver</a>
+                                        <a href="https://www.srijanrealty.com/" target="_blank">Srijan</a>
                                     </li>
                                     <li>
-                                        <a href="#">codecanyon</a>
+                                        <a href="https://ctc-composites.com/en/" target="_blank">CTC</a>
                                     </li>
                                     <li>
-                                        <a href="#">videohive</a>
+                                        <a href="https://psgroup.in/projects?utm_source=google&utm_medium=search&utm_campaign=ps-projects-search&gad_source=1&gclid=Cj0KCQjw-uK0BhC0ARIsANQtgGNeN3Cbjdp3vMMSgl_ZRU8N3cS8o_Wlj1CQ2msZAt_B4kljuMnIxDAaAtKJEALw_wcB">PS Group</a>
                                     </li>
                                     <li>
-                                        <a href="#">redpen</a>
+                                        <a href="https://mani-group.com/">Mani Group</a>
                                     </li>
                                     <li>
-                                        <a href="#">codepen</a>
+                                        <Link to="/client">Check more</Link>
                                     </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-sm-6 col-lg-2">
+                            <div className="widget4">
+                                <h5>Contact Us</h5>
+                                <ul>
+                                    <li>
+                                        <p>
+                                        3rd Floor,<br />35/43 C Purbachal <br /> Canal South Road, Kolkata 700078
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:serviceconsultancysm@gmail.com">serviceconsultancysm@gmail.com</a>
+                                    </li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -146,7 +159,7 @@ const Footer = () => {
                                 <p>
                                     &copy; Copyright All rights reserved 2023. Design By{" "}
                                     <a
-                                        href="https://www.linkedin.com/in/shekhar-hans-560822246/"
+                                        href="https://shekhar-portfolio.vercel.app/"
                                         target="_blank"
                                         className="footer-name"
                                     >

@@ -111,6 +111,12 @@ footer .logo {
     display: block;
 }
 
+.footer .widget4 ul li p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
 /* Hover styling for links in footer widget3 and widget4 */
 .footer .widget3 ul li a:hover,
 .footer .widget4 ul li a:hover,

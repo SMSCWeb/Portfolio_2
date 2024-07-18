@@ -13,7 +13,7 @@ import Image7 from "./assets/bg_image/bg14.jpg";
 import Image8 from "./assets/bg_image/bg13.jpg";
 import Image9 from "./assets/bg_image/bg12.jpg";
 import Image10 from "./assets/bg_image/bg23.jpeg";
-import Image11 from "./assets/bg_image/bg24.jpg";
+
 import Image12 from "./assets/bg_image/bg25.png";
 import Image13 from "./assets/bg_image/bg26.jpg";
 import Image14 from "./assets/bg_image/bg27.jpg";
@@ -27,7 +27,7 @@ import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
 
-const completeImages = [Image1, Image2, Image3, Image4, Image5, Image6,Image7, Image8, Image9, Image10, Image11, Image12, Image13, Image14,Image15, Image16, Image17, Image18, Image19];
+const completeImages = [Image1, Image2, Image3, Image4, Image5, Image6,Image7, Image8, Image9, Image10, Image12, Image13, Image14,Image15, Image16, Image17, Image18, Image19];
 const continueImages = [Image2, Image5, Image3, Image1, Image6, Image4];
 
 const ProjectPage = () => {
