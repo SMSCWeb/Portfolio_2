@@ -114,19 +114,19 @@ const Footer = () => {
                                 <h5>Top Clients</h5>
                                 <ul>
                                     <li>
-                                        <a href="https://www.beyondarchitecture.co.in/" target="_blank">Beyond Architecture</a>
-                                    </li>
-                                    <li>
                                         <a href="https://www.srijanrealty.com/" target="_blank">Srijan</a>
                                     </li>
                                     <li>
-                                        <a href="https://ctc-composites.com/en/" target="_blank">CTC</a>
+                                        <a href="https://www.beyondarchitecture.co.in/" target="_blank">Beyond Architecture</a>
                                     </li>
                                     <li>
                                         <a href="https://psgroup.in/projects?utm_source=google&utm_medium=search&utm_campaign=ps-projects-search&gad_source=1&gclid=Cj0KCQjw-uK0BhC0ARIsANQtgGNeN3Cbjdp3vMMSgl_ZRU8N3cS8o_Wlj1CQ2msZAt_B4kljuMnIxDAaAtKJEALw_wcB">PS Group</a>
                                     </li>
                                     <li>
-                                        <a href="https://mani-group.com/">Mani Group</a>
+                                        <a href="https://www.designcell.in/" target="_blank">Design Cell</a>
+                                    </li>
+                                    <li>
+                                        <a href="/">Vineet Sinha Architects</a>
                                     </li>
                                     <li>
                                         <Link to="/client">Check more</Link>

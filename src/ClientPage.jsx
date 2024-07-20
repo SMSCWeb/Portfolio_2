@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 const logos = [
-  'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-1663934796265803595croppedimage10.png',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLE2gjqwcc9jWYr9DY1oey6UmQrOtEBxPsPw&s',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrjxy4LCfmpgHp6uO3_fzflDp1m12qazdYow&s',
+  'https://www.sanjivaniconsultant.com/wp-content/uploads/2020/03/lg2N.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLE2gjqwcc9jWYr9DY1oey6UmQrOtEBxPsPw&s',
+  'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-1663935635122215938croppedimage18.png',
+  'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-1663934796265803595croppedimage10.png',
   'https://mani-group.com/wp-content/themes/manigroup/source/images/site-logo.svg',
   'https://ctc-composites.com/files/assets/images/ctc_both.svg',
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-16639348791902852855croppedimage11.png',
@@ -16,12 +18,9 @@ const logos = [
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-16639350621729014097croppedimage13.png',
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-1663935299943490446croppedimage15.png',
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-1663935478154692368croppedimage17.png',
-  'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-1663935635122215938croppedimage18.png',
-  'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-1663935723543309197croppedimage19.png',
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-16639358841712155371croppedimage16.png',
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-16639359441276039172croppedimage14.png',
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2020/03/lg5n.jpg',
-  'https://www.sanjivaniconsultant.com/wp-content/uploads/2020/03/lg2N.jpg',
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2020/03/lg3N.jpg',
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2020/03/lg6N.jpg',
   'https://www.sanjivaniconsultant.com/wp-content/uploads/2020/03/lg8.jpg',
