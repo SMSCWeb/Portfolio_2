@@ -133,23 +133,23 @@ const ContactPage = () => {
             <form className="form" onSubmit={(e) => Submit(e)}>
               <div className="form_box d-flex gap-2">
                 <div className="form-group col-md-6">
-                  <input type="text" name="First" className="form-control" placeholder="First Name" />
+                  <input type="text" name="First" className="form-control" placeholder="First Name" required />
                 </div>
                 <div className="form-group col-md-6">
-                  <input type="text" name="Last" className="form-control" placeholder="Last Name" />
+                  <input type="text" name="Last" className="form-control" placeholder="Last Name" required />
                 </div>
               </div>
               <div className="form_box d-flex gap-2">
                 <div className="form-group col-md-6">
-                  <input type="text" name="Email" className="form-control" placeholder="Your Email" />
+                  <input type="text" name="Email" className="form-control" placeholder="Your Email" required />
                 </div>
                 <div className="form-group col-md-6">
-                  <input type="text" name="Phone" className="form-control" placeholder="Your Phone" />
+                  <input type="text" name="Phone" className="form-control" placeholder="Your Phone" required />
                 </div>
               </div>
               <div className='col-lg-12'>
                 <div className="form_box">
-                  <textarea name="Message" className="form-control" id="Message" cols="30" rows="5" placeholder="Your Message"></textarea>
+                  <textarea name="Message" className="form-control" id="Message" cols="30" rows="5" placeholder="Your Message" required></textarea>
                 </div>
                 <button type="submit" className="contact-form-button btn btn-primary">Submit Now</button>
               </div>
