@@ -5,6 +5,8 @@ import { faFacebook, faLinkedin, faTwitter, faWhatsapp } from '@fortawesome/free
 import { Link } from 'react-router-dom';
 import { faArrowUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactPage = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -38,26 +40,28 @@ const ContactPage = () => {
     e.preventDefault();
     const formEle = document.querySelector('form');
     const formDatab = new FormData(formEle);
-  
-    
+
     axios.post(
       'https://script.google.com/macros/s/AKfycbxdl3cWVClsKlXcBUnFGnDH8zSHulYDtLY1WF5esMXDYxrBOlHb4yKGhn2Q2QKu7HF0/exec',
       formDatab
     )
       .then((res) => {
         console.log(res.data);
+        // Show success notification
+        toast.success('Message sent successfully!');
         // Reset the form after successful submission
         formEle.reset();
       })
       .catch((error) => {
         console.error(error);
+        // Show error notification
+        toast.error('Failed to send message. Please try again.');
       });
   };
-  
-  
 
   return (
     <div>
+      <ToastContainer />
       <div className={`scroll-area ${showScrollButton ? 'show' : ''}`} onClick={scrollToTop}>
         <div className="top-wrap">
           <div className="go-top-btn-wraper">
@@ -144,11 +148,10 @@ const ContactPage = () => {
                 </div>
               </div>
               <div className='col-lg-12'>
-
-              <div className="form_box">
-                <textarea name="Message" className="form-control" id="Message" cols="30" rows="5" placeholder="Your Message"></textarea>
-              </div>
-              <button type="submit" className="contact-form-button btn btn-primary">Submit Now</button>
+                <div className="form_box">
+                  <textarea name="Message" className="form-control" id="Message" cols="30" rows="5" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" className="contact-form-button btn btn-primary">Submit Now</button>
               </div>
             </form>
           </div>
