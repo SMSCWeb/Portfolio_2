@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image1 from "./assets/bg_image/bg3.jpg";
 import "./styles/ServicePage.css";
 import { Link } from "react-router-dom";
-import PDF from "./assets/Sm.pdf";
+import PDF from "./assets/SMSC_Company Profile.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-regular-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";

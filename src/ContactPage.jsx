@@ -1,62 +1,67 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './styles/ContactPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faLinkedin, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import { faArrowUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ContactPage = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const formRef = useRef(null);
 
   const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const showButtonThreshold = 300;
-
-    if (scrollY > showButtonThreshold && !showScrollButton) {
-      setShowScrollButton(true);
-    } else if (scrollY <= showButtonThreshold && showScrollButton) {
-      setShowScrollButton(false);
-    }
+    setShowScrollButton(window.scrollY > 300);
   };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [showScrollButton]);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const Submit = (e) => {
-    e.preventDefault();
-    const formEle = document.querySelector('form');
-    const formDatab = new FormData(formEle);
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(formRef.current);
 
-    axios.post(
-      'https://script.google.com/macros/s/AKfycbxdl3cWVClsKlXcBUnFGnDH8zSHulYDtLY1WF5esMXDYxrBOlHb4yKGhn2Q2QKu7HF0/exec',
-      formDatab
-    )
-      .then((res) => {
-        console.log(res.data);
-        // Show success notification
-        toast.success('Message sent successfully!');
-        // Reset the form after successful submission
-        formEle.reset();
-      })
-      .catch((error) => {
-        console.error(error);
-        // Show error notification
-        toast.error('Failed to send message. Please try again.');
-      });
+    const first = formData.get("First");
+    const last = formData.get("Last");
+    const fullName = `${first} ${last}`.trim();
+    const email = formData.get("Email");
+
+    formData.append("name", fullName);
+    formData.append("from_name", fullName);
+    formData.append("reply_to", email);
+    formData.append("access_key", "8472d75a-746d-4efd-b193-021603093873");
+
+    // ✅ Set the custom email subject
+    formData.append("subject", `SM Consultancy has received a new response from ${fullName}`);
+
+    formData.delete("First");
+    formData.delete("Last");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      toast.success('Message sent successfully!');
+      formRef.current.reset();
+    } else {
+      toast.error('Submission failed. Please try again.');
+    }
   };
 
   return (
@@ -71,6 +76,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+
       <div className="breatcome-area d-flex align-items-center">
         <div className="container">
           <div className="row">
@@ -81,11 +87,7 @@ const ContactPage = () => {
                 </div>
                 <div className="breatcome-text">
                   <ul>
-                    <li>
-                      <Link to="/">
-                        <p>Home</p>
-                      </Link>
-                    </li>
+                    <li><Link to="/"><p>Home</p></Link></li>
                     <li> &gt; Contact</li>
                   </ul>
                 </div>
@@ -95,6 +97,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+
       <div className="contact-page-container">
         <div className="contact-left-section">
           <div className="section-title">
@@ -108,17 +111,17 @@ const ContactPage = () => {
               <div className="socialLinks">
                 <ul>
                   <li>
-                    <a href="https://wa.me/918335041317" target="_blank">
+                    <a href="https://wa.me/918335041317" target="_blank" rel="noopener noreferrer">
                       <FontAwesomeIcon icon={faWhatsapp} className="fa-whatsapp fab" />
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:serviceconsultancysm@gmail.com" target="_blank">
+                    <a href="mailto:serviceconsultancysm@gmail.com" target="_blank" rel="noopener noreferrer">
                       <FontAwesomeIcon icon={faEnvelope} className="fa-gmail fab" />
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/company/s-m-service-consultancy/" target="_blank">
+                    <a href="https://www.linkedin.com/company/s-m-service-consultancy/" target="_blank" rel="noopener noreferrer">
                       <FontAwesomeIcon icon={faLinkedin} className="fab fa-linkedin-in" />
                     </a>
                   </li>
@@ -127,10 +130,11 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
+
         <div className="contact-right-section">
           <div className="row contact_bg">
             <p>Make an appointment</p>
-            <form className="form" onSubmit={(e) => Submit(e)}>
+            <form ref={formRef} className="form" onSubmit={onSubmit}>
               <div className="form_box d-flex gap-2">
                 <div className="form-group col-md-6">
                   <input type="text" name="First" className="form-control" placeholder="First Name" required />
@@ -141,15 +145,15 @@ const ContactPage = () => {
               </div>
               <div className="form_box d-flex gap-2">
                 <div className="form-group col-md-6">
-                  <input type="text" name="Email" className="form-control" placeholder="Your Email" required />
+                  <input type="email" name="Email" className="form-control" placeholder="Your Email" required />
                 </div>
                 <div className="form-group col-md-6">
                   <input type="text" name="Phone" className="form-control" placeholder="Your Phone" required />
                 </div>
               </div>
-              <div className='col-lg-12'>
+              <div className="col-lg-12">
                 <div className="form_box">
-                  <textarea name="Message" className="form-control" id="Message" cols="30" rows="5" placeholder="Your Message" required></textarea>
+                  <textarea name="Message" className="form-control" cols="30" rows="5" placeholder="Your Message" required></textarea>
                 </div>
                 <button type="submit" className="contact-form-button btn btn-primary">Submit Now</button>
               </div>
@@ -157,7 +161,6 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };
