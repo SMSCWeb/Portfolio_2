@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './HomePage';
-import AboutPage from './AboutPage';
-import ServicePage from './ServicePage';
-import ProjectPage from './ProjectPage';
-import ClientPage from './ClientPage';
-import ContactPage from './ContactPage';
-import CareerPage from './CareerPage';
-import Footer from './components/Footer';
-import NavBar from './components/Navbar';
-import Loader from './Loader';
+import HomePage from '@/Pages/HomePage';
+import AboutPage from '@/Pages/AboutPage';
+import ServicePage from '@/Pages/ServicePage';
+import ProjectPage from '@/Pages/ProjectPage';
+import ClientPage from '@/Pages/ClientPage';
+import ContactPage from '@/Pages/ContactPage';
+import CareerPage from '@/Pages/CareerPage';
+import Footer from '@/Component/Footer';
+import NavBar from '@/Component/Navbar';
+import Loader from '@/Component/Loader.jsx';
 
 const App = () => {
   const [showContent, setShowContent] = useState(true);
