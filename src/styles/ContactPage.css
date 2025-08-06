@@ -12,7 +12,7 @@
 
 .form-control:focus{
     border-color: transparent !important;
-    box-shadow: none !important;;
+    box-shadow: none !important;
 }
 
 /* Style for the right section with the image */
