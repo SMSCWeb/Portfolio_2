@@ -3,6 +3,7 @@ import "@/styles/ClientPage.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+
 const logos = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrjxy4LCfmpgHp6uO3_fzflDp1m12qazdYow&s",
   "https://www.sanjivaniconsultant.com/wp-content/uploads/2020/03/lg2N.jpg",
@@ -12,7 +13,7 @@ const logos = [
   "https://mani-group.com/wp-content/themes/manigroup/source/images/site-logo.svg",
   "https://ctc-composites.com/files/assets/images/ctc_both.svg",
   "https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-16639348791902852855croppedimage11.png",
-  "https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-16639349632145199982croppedimage12.png",
+"https://static.wixstatic.com/media/a1d5cf_78ea4295858f465c8fa2642115afc708~mv2.jpg/v1/fit/w_2500,h_1330,al_c/a1d5cf_78ea4295858f465c8fa2642115afc708~mv2.jpg",
   "https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-16639350621729014097croppedimage13.png",
   "https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-1663935299943490446croppedimage15.png",
   "https://www.sanjivaniconsultant.com/wp-content/uploads/2022/09/resize-1663935478154692368croppedimage17.png",
@@ -25,65 +26,31 @@ const logos = [
   "https://www.sanjivaniconsultant.com/wp-content/uploads/2020/02/lg11.jpg",
   "https://www.sanjivaniconsultant.com/wp-content/uploads/2020/02/lg10.jpg",
   "https://www.sanjivaniconsultant.com/wp-content/uploads/2020/02/lg9.jpg",
-  "https://www.sanjivaniconsultant.com/wp-content/uploads/2020/02/lg4.jpg",
+   "https://nexgenrealty.in/wp-content/uploads/2020/11/ambuja-neotia.jpg",
   "https://www.sanjivaniconsultant.com/wp-content/uploads/2020/02/lg7.jpg",
-  // Add URLs for all 20 logos here
-];
-
-const testimonials = [
-  {
-    id: 1,
-    name: "Client 1",
-    role: "Designer",
-    text: "Testimonial text for Client 1.",
-    imageSrc: "client1.jpg",
-  },
-  {
-    id: 2,
-    name: "Client 2",
-    role: "Developer",
-    text: "Testimonial text for Client 2.",
-    imageSrc: "client2.jpg",
-  },
-  // Add more testimonials as needed
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bhabha_Atomic_Research_Centre_Logo.png/1200px-Bhabha_Atomic_Research_Centre_Logo.png",
+  "https://upload.wikimedia.org/wikipedia/commons/4/4b/Voltas_logo.png",
+  "https://newprojects.99acres.com/projects/vinayakgroupkolkata/deodfz8_1739520805_569493689_O.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKD8T9eq5ifK9v5WdmB2h_yLxL48Qc3SYPa0DDe1yewQRaGQ5DgPgkiKR0m0G9qtm40ao&usqp=CAU",
 ];
 
 const ClientPage = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
 
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    // You can adjust the scroll position value as needed
-    const showButtonThreshold = 300;
-
-    if (scrollY > showButtonThreshold && !showScrollButton) {
-      setShowScrollButton(true);
-    } else if (scrollY <= showButtonThreshold && showScrollButton) {
-      setShowScrollButton(false);
-    }
-  };
-
   useEffect(() => {
-    // Attach the scroll event listener when the component mounts
+    const handleScroll = () => setShowScrollButton(window.scrollY > 300);
     window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    // Remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [showScrollButton]); // Dependency array ensures that the effect runs only when showScrollButton changes
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
   return (
     <div>
       <div
         className={`scroll-area ${showScrollButton ? "show" : ""}`}
-        onClick={scrollToTop}>
+        onClick={scrollToTop}
+      >
         <div className="top-wrap">
           <div className="go-top-btn-wraper">
             <div className="go-top go-top-button active">
@@ -92,6 +59,7 @@ const ClientPage = () => {
           </div>
         </div>
       </div>
+
       <div className="breatcome-area d-flex align-items-center">
         <div className="container">
           <div className="row">
@@ -103,9 +71,7 @@ const ClientPage = () => {
                 <div className="breatcome-text">
                   <ul>
                     <li>
-                      <Link to="/">
-                        <p>Home</p>
-                      </Link>
+                      <Link to="/"><p>Home</p></Link>
                     </li>
                     <li> &gt; Client</li>
                   </ul>
@@ -116,14 +82,21 @@ const ClientPage = () => {
           </div>
         </div>
       </div>
+
       <div className="client-page-section">
         <div className="client-page-container">
           <div className="client-container">
             <div className="client-row">
               {logos.map((logo, index) => (
                 <div key={index} className="client-col">
-                  <div className="client-box">
-                    <img src={logo} alt={`Client Logo ${index}`} />
+                  <div className="client-box" title={`Client ${index + 1}`}>
+                    <img
+                      src={logo}
+                      alt={`Client Logo ${index + 1}`}
+                      loading="lazy"
+                      onError={(e) => (e.currentTarget.style.visibility = "hidden")}
+                      className="logo-img"
+                    />
                   </div>
                 </div>
               ))}
@@ -131,8 +104,6 @@ const ClientPage = () => {
           </div>
         </div>
       </div>
-
-      {/* <Footer /> */}
     </div>
   );
 };
