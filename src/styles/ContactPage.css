@@ -51,7 +51,7 @@
 }
 
 /* Improved styling for input fields */
-input[type="text"],
+/* input[type="text"],
 textarea {
     width: 100%;
     padding: 10px;
@@ -60,6 +60,24 @@ textarea {
     font-size: 16px;
     outline: none;
     transition: border-color 0.3s;
+} */
+
+/* NEW – make all inputs look the same, including email/phone */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  height: 48px;            /* consistent height */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+textarea.form-control {
+  height: auto;            /* let textarea grow */
+  min-height: 140px;
 }
 
 
